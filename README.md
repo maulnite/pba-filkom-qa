@@ -1,8 +1,8 @@
 # Sistem Tanya Jawab Akademik FILKOM UB
 
-Proyek Pemrosesan Bahasa Alami Universitas Brawijaya. Sistem ini mencari bukti untuk pertanyaan factoid tentang akademik dan ujian FILKOM tanpa LLM. Repositori memuat pekerjaan Anggota 1–3, dari PDF sumber hingga daftar passage yang diurutkan untuk setiap pertanyaan.
+Proyek Pemrosesan Bahasa Alami Universitas Brawijaya. Sistem ini mencari bukti dan mengekstrak jawaban untuk pertanyaan factoid tentang akademik dan ujian FILKOM tanpa LLM. Repositori memuat pekerjaan Anggota 1–4, dari PDF sumber hingga ekstraksi jawaban ringkas.
 
-**Baseline saat ini** · 440 passage · 7 pertanyaan rujukan · 4 dari 7 bukti masuk lima besar
+**Status saat ini** · 440 passage · 11 pertanyaan rujukan · Modul retrieval & ekstraksi Hybrid aktif
 
 ## Coba eksperimen
 
@@ -22,6 +22,7 @@ Program menampilkan pertanyaan, peringkat bukti pertama, Hit@5, dan MRR. Ketujuh
 | **1. Korpus · Orie** | PDF → teks per halaman → 440 passage JSONL dengan ID, konteks, dan halaman sumber. | [Spesifikasi korpus](Anggota1_Korpus/SPEK_PASSAGE.md) · [Notebook](Anggota1_Korpus/Anggota1_Korpus.ipynb) |
 | **2. Pertanyaan · Rio** | Pertanyaan → token pencarian, jenis pertanyaan, dan tipe jawaban. Fungsi yang sama menyiapkan token passage. | [Dokumentasi](Anggota2_Pertanyaan/README.md) · [Notebook](Anggota2_Pertanyaan/Anggota2_Pertanyaan.ipynb) |
 | **3. Pencarian · Affan** | Token → TF-IDF dan cosine similarity → kandidat berperingkat dengan teks asli dan metadata sumber. | [Dokumentasi](Anggota3_Retrieval/README.md) · [Notebook](Anggota3_Retrieval/Anggota3_Retrieval.ipynb) |
+| **4. Ekstraksi Jawaban** | Kandidat passage + `tipe_jawaban` → arsitektur Hybrid (Simbolik + Dependency Parsing UDPipe) → jawaban ringkas dan sumber. | [Dokumentasi](Anggota4/README.md) · [Notebook](Anggota4/Anggota4_Jawaban.ipynb) |
 
 ## Data
 
@@ -31,7 +32,7 @@ Program menampilkan pertanyaan, peringkat bukti pertama, Hit@5, dan MRR. Ketujuh
 | [Data korpus](Anggota1_Korpus/data) | Passage, metadata dokumen, dan transkripsi manual untuk tabel, rumus, serta PDF hasil pindai. |
 | [Teks hasil ekstraksi](Anggota1_Korpus/korpus_txt) | Teks dua dokumen PDF per halaman untuk pemeriksaan. |
 | [Ekspor Anggota 2](Anggota2_Pertanyaan/output) | 440 passage bertoken dan 12 contoh hasil pemrosesan pertanyaan. |
-| Pertanyaan rujukan | Empat dari [Anggota 2](Anggota2_Pertanyaan/data/pertanyaan_anggota2.json) dan tiga dari [Anggota 3](Anggota3_Retrieval/data/pertanyaan_anggota3.json). |
+| Pertanyaan rujukan | Empat dari [Anggota 2](Anggota2_Pertanyaan/data/pertanyaan_anggota2.json), tiga dari [Anggota 3](Anggota3_Retrieval/data/pertanyaan_anggota3.json), dan empat dari [Anggota 4](Anggota4/data/pertanyaan_anggota4.json). |
 | [Referensi tambahan](referensi_korpus) | Enam PDF kandidat korpus yang tersedia untuk rujukan. |
 
 Jawaban merujuk pada edisi dokumen dalam korpus. Tahun dan halaman ikut disimpan agar bukti dapat ditelusuri.

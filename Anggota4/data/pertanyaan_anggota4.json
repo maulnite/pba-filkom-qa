@@ -1,0 +1,46 @@
+[
+  {
+    "no": 1,
+    "penanya": "Anggota 4",
+    "pertanyaan": "Berapa persentase kehadiran minimal agar mahasiswa boleh mengikuti UAS?",
+    "jawaban": "80%",
+    "passage_id": ["pa2020-III-K-1", "pa2020-II-F-10"],
+    "tipe": "PERSENTASE",
+    "jenis_pertanyaan": "BERAPA",
+    "bukti": "kehadiran kurang dari 80% dari total tatap muka (14 kali), tidak diperbolehkan mengikuti Ujian Akhir Semester (UAS)",
+    "catatan": "Batas minimum kehadiran kuliah untuk berhak mengikuti UAS adalah 80%."
+  },
+  {
+    "no": 2,
+    "penanya": "Anggota 4",
+    "pertanyaan": "Berapa menit batas maksimal keterlambatan mengikuti ujian?",
+    "jawaban": "15 menit",
+    "passage_id": ["tatatertib-X-S1-3"],
+    "tipe": "DURASI",
+    "jenis_pertanyaan": "BERAPA",
+    "bukti": "keterlambatan dengan alasan tertentu maksimal 15 (lima belas) menit",
+    "catatan": "Tata Tertib Pelaksanaan Ujian (UTS & UAS) FILKOM UB, butir 3."
+  },
+  {
+    "no": 3,
+    "penanya": "Anggota 4",
+    "pertanyaan": "Berapa bobot nilai huruf B+?",
+    "jawaban": "3,5",
+    "passage_id": ["pa2020-bobot-2", "penilaian-bobot-2"],
+    "tipe": "ANGKA",
+    "jenis_pertanyaan": "BERAPA",
+    "bukti": "nilai huruf B+ memiliki bobot 3,5",
+    "catatan": "Tabel bobot nilai pada Pedoman Akademik FILKOM 2020 dan Pedoman Penilaian PTIIK 2015."
+  },
+  {
+    "no": 4,
+    "penanya": "Anggota 4",
+    "pertanyaan": "Siapa yang menetapkan pengecualian Dosen Pembimbing Skripsi?",
+    "jawaban": "Dekan",
+    "passage_id": ["pa2020-VI-A-11"],
+    "tipe": "JABATAN",
+    "jenis_pertanyaan": "SIAPA",
+    "bukti": "atas usul Ketua Program Studi dengan persetujuan Ketua Jurusan dan ditetapkan oleh Dekan",
+    "catatan": "Terdapat tiga jabatan dalam satu kalimat; Dekan berperan sebagai pihak yang menetapkan."
+  }
+]
