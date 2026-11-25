@@ -3,12 +3,11 @@
 Affan Abyarahman
 
 - `retrieval.py`: mengurutkan passage berdasarkan TF-IDF dan cosine similarity.
-- `Anggota3_Retrieval.ipynb`: contoh pemakaian, pengecekan data, dan hasil uji.
+- `Anggota3_Retrieval.ipynb`: memeringkat passage untuk 20 pertanyaan berdasarkan token keluaran Anggota 2.
+- `output/hasil_pencarian.json`: lima kandidat lengkap per soal beserta skor cosine dan urutan ID seluruh kandidat berskor positif.
 - `data/pertanyaan_anggota3.json`: tiga pertanyaan evaluasi beserta bukti. Nomor 1–3 adalah nomor lokal; sesuaikan saat digabung.
 
-**Colab:** unggah `PBA_FILKOM_Anggota1-3.zip` ke panel Files di `/content`, lalu klik **Run all**. Sel pertama mengekstrak data dan modul yang diperlukan.
-
-**Lokal:** ekstrak paket gabungan, lalu buka notebook dari folder proyek atau folder Anggota 3. Gunakan Python 3.10+ dan scikit-learn.
+Jalankan notebook dengan direktori kerja `Anggota3_Retrieval` dan kernel dari lingkungan proyek.
 
 ## Cara panggil dari aplikasi utama
 

@@ -2,7 +2,7 @@
 
 Priyambodo Arundaya Satmika · 245150201111011
 
-Tahap penutup sistem: mengukur ketepatan jawaban akhir, bukan lagi ketepatan retrieval. Lima kandidat passage dari Anggota 5 diolah ekstraktor Anggota 4, lalu jawabannya dibandingkan dengan jawaban rujukan secara otomatis tanpa LLM.
+Tahap penutup mengukur ketepatan jawaban akhir. Notebook membandingkan jawaban Anggota 4 dengan rujukan secara otomatis, lalu mengaitkan putusan dengan peringkat bukti dari Anggota 5.
 
 Modul ini melengkapi tahap yang disebut pada [README proyek](../README.md) dan bagian **Masukan untuk Anggota 6** di [dokumentasi Anggota 5](../Anggota5_Evaluasi_Retrieval/README.md).
 
@@ -29,9 +29,7 @@ Menjalankan seluruh notebook dari terminal (direktori kerja mengikuti folder not
 uv run --locked --group notebook jupyter nbconvert --to notebook --execute --inplace Anggota6_Evaluasi_Jawaban/Anggota6_Evaluasi_Jawaban.ipynb
 ```
 
-Model UDPipe Indonesia diunduh pada pemakaian pertama karena ekstraktor Anggota 4 memakainya.
-
-Masukan tahap ini adalah `Anggota5_Evaluasi_Retrieval/output/hasil_retrieval.json`. Tidak ada pertanyaan baru di folder ini: seluruh soal, jawaban rujukan, dan lima kandidat per soal berasal dari Anggota 5, sehingga penilaian tetap dapat diulang dari data yang sudah dibekukan.
+Notebook membaca `hasil_ekstraksi.json` dari Anggota 4 dan `hasil_retrieval.json` dari Anggota 5. Perintah Python `evaluasi_jawaban` menjalankan ulang ekstraktor secara mandiri dan dapat mengunduh UDPipe pada pemakaian pertama.
 
 ## Aturan penilaian
 

@@ -16,8 +16,8 @@ from Anggota3_Retrieval.retrieval import Retrieval
 from Anggota4.ekstraksi import EkstraktorJawaban, load_udpipe
 
 AKAR = Path(__file__).resolve().parents[1]
-BERKAS_PASSAGES = AKAR / "Anggota1_Korpus" / "data" / "passages.jsonl"
-BERKAS_DOKUMEN = AKAR / "Anggota1_Korpus" / "data" / "dokumen.json"
+BERKAS_PASSAGES = AKAR / "Anggota1_Korpus" / "output" / "passages.jsonl"
+BERKAS_DOKUMEN = AKAR / "Anggota1_Korpus" / "output" / "dokumen.json"
 BERKAS_UJI = AKAR / "Anggota5_Evaluasi_Retrieval" / "data" / "pertanyaan_uji.json"
 BERKAS_RETRIEVAL = AKAR / "Anggota5_Evaluasi_Retrieval" / "output" / "hasil_retrieval.json"
 BERKAS_EVALUASI = AKAR / "Anggota6_Evaluasi_Jawaban" / "output" / "hasil_evaluasi.json"

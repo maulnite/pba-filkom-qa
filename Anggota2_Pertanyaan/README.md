@@ -12,24 +12,10 @@ jawaban yang diharapkan. Modul siap diuji saat integrasi dengan Anggota 3–5.
 | `preprocess.py` | Normalisasi, tokenisasi regex, alias istilah, dan stopword removal bersama. |
 | `question_processing.py` | Deteksi jenis pertanyaan dan tipe jawaban berbasis aturan. |
 | `data/pertanyaan_anggota2.json` | Empat pertanyaan, jawaban rujukan, kutipan, dan daftar passage ID. |
-| `output/hasil_pertanyaan.json` | Dua belas contoh keluaran pemrosesan pertanyaan. |
+| `output/hasil_pertanyaan.json` | Hasil pemrosesan 20 pertanyaan beserta ID dan jawaban rujukan. |
 | `output/passages_preprocessed.jsonl` | Token pencarian seluruh 440 passage, disertai ID dan metadata lokasi. |
 
-Struktur folder yang diharapkan:
-
-```text
-pba-filkom-qa/
-├── Anggota1_Korpus/data/
-│   ├── passages.jsonl
-│   └── dokumen.json
-└── Anggota2_Pertanyaan/
-    ├── Anggota2_Pertanyaan.ipynb
-    ├── preprocess.py
-    ├── question_processing.py
-    ├── README.md
-    ├── data/pertanyaan_anggota2.json
-    └── output/
-```
+Notebook membaca passage hasil Anggota 1 dan set uji gabungan. Tabel menampilkan tipe jawaban dan token pencarian tiap soal.
 
 Dari folder `Anggota2_Pertanyaan`:
 
@@ -37,13 +23,7 @@ Dari folder `Anggota2_Pertanyaan`:
 py -X utf8 question_processing.py "Berapa IPK minimal untuk lulus?"
 ```
 
-Modul utama hanya membutuhkan **Python >= 3.10**, tanpa pip install, model, API,
-atau akses internet. Untuk contoh lengkap, buka notebook di VS Code/Jupyter,
-pilih kernel Python yang tersedia di komputer sendiri, lalu **Run All**.
-Notebook dapat dijalankan dari root repositori atau folder Anggota2_Pertanyaan.
-Lingkungan `.venv` Anggota 1 yang disalin dari komputer lain tidak dijadikan syarat.
-Semua kode implementasi berada pada dua modul Python; notebook mengimpornya agar
-tidak ada dua versi logika yang berbeda.
+Modul Python dipakai oleh demo web. Notebook memuat aturan pemrosesan langsung di sel dan memakai pandas untuk menampilkan hasil.
 
 ## Penjelasan metode untuk bagian Bab II–IV
 
@@ -111,7 +91,6 @@ ubah fungsi bersama dan bangun ulang seluruh indeks, bukan hanya query.
 | `unicodedata` | Normalisasi Unicode. |
 | `json` | Membaca korpus/ground truth dan menulis keluaran terstruktur. |
 | `pathlib`, `sys` | Lokasi data, impor modul, dan pemanggilan terminal. |
-| `hashlib` | Memastikan berkas input tetap sama selama notebook berjalan. |
 | `IPython.display` | Tabel contoh dalam notebook; tidak diperlukan oleh modul utama. |
 
 Daftar stopword, alias domain, regex, prioritas aturan, kontrak keluaran, dan
@@ -236,19 +215,7 @@ Alternatifnya, gunakan daftar `token_pencarian` pada ekspor secara langsung.
 
 ## Pemeriksaan yang sudah dijalankan
 
-Notebook telah dijalankan dari kernel baru Python 3.13.7, 9 sel kode, berurutan:
-
-- 29 kasus regresi klasifikasi lolos.
-- Desimal, simbol, nilai B+/D+, negasi, angka kata, konteks, dan input kosong/non-string diperiksa.
-- Seluruh 440 passage berhasil diproses tanpa token kosong.
-- Empat ground truth cocok dengan ID/kutipan korpus; nilai 78 berada pada rentang B+.
-- Ekspor memuat 12 contoh pertanyaan dan 440 passage.
-- SHA256 kedua berkas data sumber tidak berubah selama eksekusi.
-
-Angka 29 menghitung kasus regresi yang dirancang untuk aturan ini. Percobaan
-retrieval paket gabungan tercatat di [hasil eksperimen](../docs/eksperimen.md).
-Lingkungan Jupyter lokal sempat mencetak pesan libzmq saat kernel ditutup;
-seluruh sel selesai, output tersimpan, dan tidak ada error output pada notebook.
+Ekspor memuat 20 pertanyaan dan 440 passage. Hasil retrieval tercatat di [hasil eksperimen](../docs/eksperimen.md).
 
 ## Keterbatasan
 

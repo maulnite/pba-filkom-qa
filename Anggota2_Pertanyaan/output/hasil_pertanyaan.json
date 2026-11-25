@@ -1,370 +1,1139 @@
 [
   {
+    "id_pertanyaan": "A2-001",
+    "no": 1,
+    "penanya": "Anggota 2",
+    "sumber_kontribusi": "Anggota 2",
     "pertanyaan": "Berapa sks minimal untuk menyelesaikan studi sarjana?",
-    "normalisasi": "berapa sks minimal untuk menyelesaikan studi sarjana?",
-    "token": [
-      "berapa",
-      "sks",
-      "minimal",
-      "untuk",
-      "menyelesaikan",
-      "studi",
-      "sarjana"
+    "jawaban": "144 sks",
+    "passage_id": [
+      "pa2020-II-I-7",
+      "pa2020-V-K-8"
     ],
-    "token_pencarian": [
-      "sks",
-      "minimal",
-      "menyelesaikan",
-      "studi",
-      "sarjana"
-    ],
-    "kata_kunci": [
-      "sks",
-      "minimal",
-      "menyelesaikan",
-      "studi",
-      "sarjana"
-    ],
-    "query": "sks minimal menyelesaikan studi sarjana",
+    "tipe": "ANGKA",
     "jenis_pertanyaan": "BERAPA",
-    "penanda_tanya": "berapa",
-    "tipe_jawaban": "ANGKA",
-    "aturan_tipe": "objek hitungan numerik",
-    "status": "SIAP_RETRIEVAL",
-    "catatan": [],
-    "versi_preprocess": "1.0"
+    "bukti": "jumlah nilai kredit minimal 144 sks",
+    "bukti_per_passage": {
+      "pa2020-II-I-7": "jumlah nilai kredit minimal 144 sks",
+      "pa2020-V-K-8": "dapat merupakan bagian dari syarat minimal kelulusan program sarjana yaitu 144 sks"
+    },
+    "catatan": "Pertanyaan hanya meminta jumlah sks. Persyaratan kelulusan lain tetap berlaku.",
+    "query": {
+      "pertanyaan": "Berapa sks minimal untuk menyelesaikan studi sarjana?",
+      "normalisasi": "berapa sks minimal untuk menyelesaikan studi sarjana?",
+      "token": [
+        "berapa",
+        "sks",
+        "minimal",
+        "untuk",
+        "menyelesaikan",
+        "studi",
+        "sarjana"
+      ],
+      "token_pencarian": [
+        "sks",
+        "minimal",
+        "menyelesaikan",
+        "studi",
+        "sarjana"
+      ],
+      "kata_kunci": [
+        "sks",
+        "minimal",
+        "menyelesaikan",
+        "studi",
+        "sarjana"
+      ],
+      "query": "sks minimal menyelesaikan studi sarjana",
+      "jenis_pertanyaan": "BERAPA",
+      "penanda_tanya": "berapa",
+      "tipe_jawaban": "ANGKA",
+      "aturan_tipe": "objek hitungan numerik",
+      "status": "SIAP_RETRIEVAL",
+      "catatan": [],
+      "versi_preprocess": "1.0"
+    }
   },
   {
+    "id_pertanyaan": "A2-002",
+    "no": 2,
+    "penanya": "Anggota 2",
+    "sumber_kontribusi": "Anggota 2",
     "pertanyaan": "Berapa lama waktu maksimal untuk Ujian Skripsi?",
-    "normalisasi": "berapa lama waktu maksimal untuk ujian skripsi?",
-    "token": [
-      "berapa",
-      "lama",
-      "waktu",
-      "maksimal",
-      "untuk",
-      "ujian",
-      "skripsi"
+    "jawaban": "75 menit",
+    "passage_id": [
+      "pa2020-VI-D-10"
     ],
-    "token_pencarian": [
-      "lama",
-      "waktu",
-      "maksimal",
-      "ujian",
-      "skripsi"
-    ],
-    "kata_kunci": [
-      "lama",
-      "waktu",
-      "maksimal",
-      "ujian",
-      "skripsi"
-    ],
-    "query": "lama waktu maksimal ujian skripsi",
+    "tipe": "DURASI",
     "jenis_pertanyaan": "BERAPA",
-    "penanda_tanya": "berapa",
-    "tipe_jawaban": "DURASI",
-    "aturan_tipe": "objek hitungan berupa lama waktu",
-    "status": "SIAP_RETRIEVAL",
-    "catatan": [],
-    "versi_preprocess": "1.0"
+    "bukti": "Ujian Skripsi paling lama 75 menit",
+    "catatan": "Batas waktu untuk masing-masing mahasiswa.",
+    "query": {
+      "pertanyaan": "Berapa lama waktu maksimal untuk Ujian Skripsi?",
+      "normalisasi": "berapa lama waktu maksimal untuk ujian skripsi?",
+      "token": [
+        "berapa",
+        "lama",
+        "waktu",
+        "maksimal",
+        "untuk",
+        "ujian",
+        "skripsi"
+      ],
+      "token_pencarian": [
+        "lama",
+        "waktu",
+        "maksimal",
+        "ujian",
+        "skripsi"
+      ],
+      "kata_kunci": [
+        "lama",
+        "waktu",
+        "maksimal",
+        "ujian",
+        "skripsi"
+      ],
+      "query": "lama waktu maksimal ujian skripsi",
+      "jenis_pertanyaan": "BERAPA",
+      "penanda_tanya": "berapa",
+      "tipe_jawaban": "DURASI",
+      "aturan_tipe": "objek hitungan berupa lama waktu",
+      "status": "SIAP_RETRIEVAL",
+      "catatan": [],
+      "versi_preprocess": "1.0"
+    }
   },
   {
+    "id_pertanyaan": "A2-003",
+    "no": 3,
+    "penanya": "Anggota 2",
+    "sumber_kontribusi": "Anggota 2",
     "pertanyaan": "Apa itu skripsi?",
-    "normalisasi": "apa itu skripsi?",
-    "token": [
-      "apa",
-      "itu",
-      "skripsi"
+    "jawaban": "Karya ilmiah mahasiswa pendidikan program sarjana yang merupakan wujud dari kajian pengetahuan dan/atau penerapan teknologi berdasarkan kaidah ilmiah dalam bidang studi yang telah dipelajarinya.",
+    "passage_id": [
+      "pa2020-VI-A-1"
     ],
-    "token_pencarian": [
-      "skripsi"
-    ],
-    "kata_kunci": [
-      "skripsi"
-    ],
-    "query": "skripsi",
+    "tipe": "DEFINISI",
     "jenis_pertanyaan": "APA",
-    "penanda_tanya": "apa",
-    "tipe_jawaban": "DEFINISI",
-    "aturan_tipe": "permintaan makna istilah",
-    "status": "SIAP_RETRIEVAL",
-    "catatan": [],
-    "versi_preprocess": "1.0"
+    "bukti": "Skripsi adalah karya ilmiah mahasiswa pendidikan program sarjana",
+    "catatan": "Jawaban merupakan definisi pada passage, tanpa penanda butir.",
+    "query": {
+      "pertanyaan": "Apa itu skripsi?",
+      "normalisasi": "apa itu skripsi?",
+      "token": [
+        "apa",
+        "itu",
+        "skripsi"
+      ],
+      "token_pencarian": [
+        "skripsi"
+      ],
+      "kata_kunci": [
+        "skripsi"
+      ],
+      "query": "skripsi",
+      "jenis_pertanyaan": "APA",
+      "penanda_tanya": "apa",
+      "tipe_jawaban": "DEFINISI",
+      "aturan_tipe": "permintaan makna istilah",
+      "status": "SIAP_RETRIEVAL",
+      "catatan": [],
+      "versi_preprocess": "1.0"
+    }
   },
   {
+    "id_pertanyaan": "A2-004",
+    "no": 4,
+    "penanya": "Anggota 2",
+    "sumber_kontribusi": "Anggota 2",
     "pertanyaan": "Apa nilai huruf untuk nilai angka 78?",
-    "normalisasi": "apa nilai huruf untuk nilai angka 78?",
-    "token": [
-      "apa",
-      "nilai",
-      "huruf",
-      "untuk",
-      "nilai",
-      "angka",
-      "78"
+    "jawaban": "B+",
+    "passage_id": [
+      "pa2020-tabel3-2",
+      "penilaian-konversi-2"
     ],
-    "token_pencarian": [
-      "nilai",
-      "huruf",
-      "nilai",
-      "angka",
-      "78"
-    ],
-    "kata_kunci": [
-      "nilai",
-      "huruf",
-      "angka",
-      "78"
-    ],
-    "query": "nilai huruf nilai angka 78",
+    "tipe": "NILAI_HURUF",
     "jenis_pertanyaan": "APA",
-    "penanda_tanya": "apa",
-    "tipe_jawaban": "NILAI_HURUF",
-    "aturan_tipe": "target konversi ke huruf",
-    "status": "SIAP_RETRIEVAL",
-    "catatan": [],
-    "versi_preprocess": "1.0"
+    "bukti": "75 < N ≤ 80 dikonversi menjadi nilai huruf B+",
+    "bukti_per_passage": {
+      "pa2020-tabel3-2": "Nilai angka (N) dengan rentang 75 < N ≤ 80 dikonversi menjadi nilai huruf B+",
+      "penilaian-konversi-2": "nilai angka (N) dengan rentang 75 < N ≤ 80 dikonversi menjadi nilai huruf B+"
+    },
+    "catatan": "78 berada pada rentang B+. Dua sumber memuat rentang yang sama.",
+    "query": {
+      "pertanyaan": "Apa nilai huruf untuk nilai angka 78?",
+      "normalisasi": "apa nilai huruf untuk nilai angka 78?",
+      "token": [
+        "apa",
+        "nilai",
+        "huruf",
+        "untuk",
+        "nilai",
+        "angka",
+        "78"
+      ],
+      "token_pencarian": [
+        "nilai",
+        "huruf",
+        "nilai",
+        "angka",
+        "78"
+      ],
+      "kata_kunci": [
+        "nilai",
+        "huruf",
+        "angka",
+        "78"
+      ],
+      "query": "nilai huruf nilai angka 78",
+      "jenis_pertanyaan": "APA",
+      "penanda_tanya": "apa",
+      "tipe_jawaban": "NILAI_HURUF",
+      "aturan_tipe": "target konversi ke huruf",
+      "status": "SIAP_RETRIEVAL",
+      "catatan": [],
+      "versi_preprocess": "1.0"
+    }
   },
   {
-    "pertanyaan": "Berapa bobot nilai huruf B+?",
-    "normalisasi": "berapa bobot nilai huruf b+?",
-    "token": [
-      "berapa",
-      "bobot",
-      "nilai",
-      "huruf",
-      "b+"
+    "id_pertanyaan": "A3-001",
+    "no": 5,
+    "penanya": "Anggota 3",
+    "sumber_kontribusi": "Anggota 3",
+    "pertanyaan": "Berapa lama waktu maksimal untuk menyelesaikan studi sarjana?",
+    "jawaban": "14 semester sejak pertama kali terdaftar sebagai mahasiswa.",
+    "passage_id": [
+      "pa2020-II-I-8"
     ],
-    "token_pencarian": [
-      "bobot",
-      "nilai",
-      "huruf",
-      "b+"
-    ],
-    "kata_kunci": [
-      "bobot",
-      "nilai",
-      "huruf",
-      "b+"
-    ],
-    "query": "bobot nilai huruf b+",
+    "tipe": "DURASI",
     "jenis_pertanyaan": "BERAPA",
-    "penanda_tanya": "berapa",
-    "tipe_jawaban": "ANGKA",
-    "aturan_tipe": "objek hitungan numerik",
-    "status": "SIAP_RETRIEVAL",
-    "catatan": [],
-    "versi_preprocess": "1.0"
+    "bukti": "paling lama empat belas semester terhitung sejak saat mahasiswa tersebut untuk pertama kalinya terdaftar sebagai mahasiswa",
+    "catatan": "Pedoman Akademik FILKOM 2020.",
+    "query": {
+      "pertanyaan": "Berapa lama waktu maksimal untuk menyelesaikan studi sarjana?",
+      "normalisasi": "berapa lama waktu maksimal untuk menyelesaikan studi sarjana?",
+      "token": [
+        "berapa",
+        "lama",
+        "waktu",
+        "maksimal",
+        "untuk",
+        "menyelesaikan",
+        "studi",
+        "sarjana"
+      ],
+      "token_pencarian": [
+        "lama",
+        "waktu",
+        "maksimal",
+        "menyelesaikan",
+        "studi",
+        "sarjana"
+      ],
+      "kata_kunci": [
+        "lama",
+        "waktu",
+        "maksimal",
+        "menyelesaikan",
+        "studi",
+        "sarjana"
+      ],
+      "query": "lama waktu maksimal menyelesaikan studi sarjana",
+      "jenis_pertanyaan": "BERAPA",
+      "penanda_tanya": "berapa",
+      "tipe_jawaban": "DURASI",
+      "aturan_tipe": "objek hitungan berupa lama waktu",
+      "status": "SIAP_RETRIEVAL",
+      "catatan": [],
+      "versi_preprocess": "1.0"
+    }
   },
   {
-    "pertanyaan": "Bagaimana cara menghitung IP?",
-    "normalisasi": "bagaimana cara menghitung ip?",
-    "token": [
-      "bagaimana",
-      "cara",
-      "menghitung",
-      "ip"
+    "id_pertanyaan": "A3-002",
+    "no": 6,
+    "penanya": "Anggota 3",
+    "sumber_kontribusi": "Anggota 3",
+    "pertanyaan": "Kapan batas pengajuan cuti akademik setelah daftar ulang?",
+    "jawaban": "Paling lambat 1 bulan setelah masa daftar ulang berakhir.",
+    "passage_id": [
+      "pa2020-III-G-2"
     ],
-    "token_pencarian": [
-      "cara",
-      "menghitung",
-      "ip"
-    ],
-    "kata_kunci": [
-      "cara",
-      "menghitung",
-      "ip"
-    ],
-    "query": "cara menghitung ip",
-    "jenis_pertanyaan": "BAGAIMANA",
-    "penanda_tanya": "bagaimana",
-    "tipe_jawaban": "RUMUS",
-    "aturan_tipe": "permintaan rumus atau cara menghitung",
-    "status": "SIAP_RETRIEVAL",
-    "catatan": [],
-    "versi_preprocess": "1.0"
-  },
-  {
-    "pertanyaan": "Apa syarat mengikuti Ujian Skripsi?",
-    "normalisasi": "apa syarat mengikuti ujian skripsi?",
-    "token": [
-      "apa",
-      "syarat",
-      "mengikuti",
-      "ujian",
-      "skripsi"
-    ],
-    "token_pencarian": [
-      "syarat",
-      "mengikuti",
-      "ujian",
-      "skripsi"
-    ],
-    "kata_kunci": [
-      "syarat",
-      "mengikuti",
-      "ujian",
-      "skripsi"
-    ],
-    "query": "syarat mengikuti ujian skripsi",
-    "jenis_pertanyaan": "APA",
-    "penanda_tanya": "apa",
-    "tipe_jawaban": "SYARAT",
-    "aturan_tipe": "permintaan persyaratan",
-    "status": "SIAP_RETRIEVAL",
-    "catatan": [
-      "Tipe ini memerlukan penanganan anggota 4 dan dapat melampaui jawaban factoid singkat."
-    ],
-    "versi_preprocess": "1.0"
-  },
-  {
-    "pertanyaan": "Siapa yang menetapkan Dosen Pembimbing Skripsi?",
-    "normalisasi": "siapa yang menetapkan dosen pembimbing skripsi?",
-    "token": [
-      "siapa",
-      "yang",
-      "menetapkan",
-      "dosen",
-      "pembimbing",
-      "skripsi"
-    ],
-    "token_pencarian": [
-      "menetapkan",
-      "dosen",
-      "pembimbing",
-      "skripsi"
-    ],
-    "kata_kunci": [
-      "menetapkan",
-      "dosen",
-      "pembimbing",
-      "skripsi"
-    ],
-    "query": "menetapkan dosen pembimbing skripsi",
-    "jenis_pertanyaan": "SIAPA",
-    "penanda_tanya": "siapa",
-    "tipe_jawaban": "JABATAN",
-    "aturan_tipe": "siapa tanpa permintaan nama; asumsi domain akademik",
-    "status": "SIAP_RETRIEVAL",
-    "catatan": [
-      "Korpus terutama memuat jabatan. Pemetaan SIAPA ke JABATAN adalah heuristik, bukan NER."
-    ],
-    "versi_preprocess": "1.0"
-  },
-  {
-    "pertanyaan": "Kapan FILKOM resmi berdiri?",
-    "normalisasi": "kapan filkom resmi berdiri?",
-    "token": [
-      "kapan",
-      "filkom",
-      "resmi",
-      "berdiri"
-    ],
-    "token_pencarian": [
-      "filkom",
-      "resmi",
-      "berdiri"
-    ],
-    "kata_kunci": [
-      "filkom",
-      "resmi",
-      "berdiri"
-    ],
-    "query": "filkom resmi berdiri",
+    "tipe": "WAKTU",
     "jenis_pertanyaan": "KAPAN",
-    "penanda_tanya": "kapan",
-    "tipe_jawaban": "WAKTU",
-    "aturan_tipe": "kapan: tanggal, tahun, atau peristiwa awal/akhir",
-    "status": "SIAP_RETRIEVAL",
-    "catatan": [
-      "Kalender akademik tidak tersedia; fakta tahun atau peristiwa mungkin tersedia."
-    ],
-    "versi_preprocess": "1.0"
+    "bukti": "Cuti akademik diajukan paling lambat 1 (satu) bulan setelah berakhirnya masa daftar ulang",
+    "catatan": "Tenggat relatif, bukan tanggal kalender.",
+    "query": {
+      "pertanyaan": "Kapan batas pengajuan cuti akademik setelah daftar ulang?",
+      "normalisasi": "kapan batas pengajuan cuti akademik setelah daftar ulang?",
+      "token": [
+        "kapan",
+        "batas",
+        "pengajuan",
+        "cuti",
+        "akademik",
+        "setelah",
+        "daftar",
+        "ulang"
+      ],
+      "token_pencarian": [
+        "batas",
+        "pengajuan",
+        "cuti",
+        "akademik",
+        "setelah",
+        "daftar",
+        "ulang"
+      ],
+      "kata_kunci": [
+        "batas",
+        "pengajuan",
+        "cuti",
+        "akademik",
+        "setelah",
+        "daftar",
+        "ulang"
+      ],
+      "query": "batas pengajuan cuti akademik setelah daftar ulang",
+      "jenis_pertanyaan": "KAPAN",
+      "penanda_tanya": "kapan",
+      "tipe_jawaban": "WAKTU",
+      "aturan_tipe": "kapan: tanggal, tahun, atau peristiwa awal/akhir",
+      "status": "SIAP_RETRIEVAL",
+      "catatan": [
+        "Kalender akademik tidak tersedia; fakta tahun atau peristiwa mungkin tersedia."
+      ],
+      "versi_preprocess": "1.0"
+    }
   },
   {
-    "pertanyaan": "Siapa nama dekan FILKOM sekarang?",
-    "normalisasi": "siapa nama dekan filkom sekarang?",
-    "token": [
-      "siapa",
-      "nama",
-      "dekan",
-      "filkom",
-      "sekarang"
+    "id_pertanyaan": "A3-003",
+    "no": 7,
+    "penanya": "Anggota 3",
+    "sumber_kontribusi": "Anggota 3",
+    "pertanyaan": "Apa rumus indeks prestasi semester?",
+    "jawaban": "IP = Σ (K_i × Na_i) / Σ K_i.",
+    "passage_id": [
+      "pa2020-II-H-3"
     ],
-    "token_pencarian": [
-      "nama",
-      "dekan",
-      "filkom",
-      "sekarang"
-    ],
-    "kata_kunci": [
-      "nama",
-      "dekan",
-      "filkom",
-      "sekarang"
-    ],
-    "query": "nama dekan filkom sekarang",
-    "jenis_pertanyaan": "SIAPA",
-    "penanda_tanya": "siapa",
-    "tipe_jawaban": "ORANG",
-    "aturan_tipe": "siapa disertai permintaan nama",
-    "status": "SIAP_RETRIEVAL",
-    "catatan": [
-      "Korpus terutama memuat jabatan. Pemetaan SIAPA ke JABATAN adalah heuristik, bukan NER.",
-      "Nama orang sangat terbatas; keberadaan jawaban harus diperiksa saat retrieval.",
-      "Korpus historis (FILKOM 2020, tata tertib 2016, penilaian 2015); bukan aturan terkini."
-    ],
-    "versi_preprocess": "1.0"
-  },
-  {
-    "pertanyaan": "Berapa sks maksimal per semester?",
-    "normalisasi": "berapa sks maksimal per semester?",
-    "token": [
-      "berapa",
-      "sks",
-      "maksimal",
-      "per",
-      "semester"
-    ],
-    "token_pencarian": [
-      "sks",
-      "maksimal",
-      "per",
-      "semester"
-    ],
-    "kata_kunci": [
-      "sks",
-      "maksimal",
-      "per",
-      "semester"
-    ],
-    "query": "sks maksimal per semester",
-    "jenis_pertanyaan": "BERAPA",
-    "penanda_tanya": "berapa",
-    "tipe_jawaban": "ANGKA",
-    "aturan_tipe": "objek hitungan numerik",
-    "status": "SIAP_RETRIEVAL",
-    "catatan": [],
-    "versi_preprocess": "1.0"
-  },
-  {
-    "pertanyaan": "Apa?",
-    "normalisasi": "apa?",
-    "token": [
-      "apa"
-    ],
-    "token_pencarian": [],
-    "kata_kunci": [],
-    "query": "",
+    "tipe": "RUMUS",
     "jenis_pertanyaan": "APA",
-    "penanda_tanya": "apa",
-    "tipe_jawaban": "DEFINISI",
-    "aturan_tipe": "apa tanpa target khusus; asumsi definisi",
-    "status": "PERLU_KLARIFIKASI",
-    "catatan": [
-      "Gunakan kata tanya dan sebutkan objek akademik yang ingin ditanyakan."
+    "bukti": "IP = Σ (K_i × Na_i) / Σ K_i",
+    "catatan": "Pedoman Akademik FILKOM 2020.",
+    "query": {
+      "pertanyaan": "Apa rumus indeks prestasi semester?",
+      "normalisasi": "apa rumus indeks prestasi semester?",
+      "token": [
+        "apa",
+        "rumus",
+        "ip",
+        "semester"
+      ],
+      "token_pencarian": [
+        "rumus",
+        "ip",
+        "semester"
+      ],
+      "kata_kunci": [
+        "rumus",
+        "ip",
+        "semester"
+      ],
+      "query": "rumus ip semester",
+      "jenis_pertanyaan": "APA",
+      "penanda_tanya": "apa",
+      "tipe_jawaban": "RUMUS",
+      "aturan_tipe": "permintaan rumus atau cara menghitung",
+      "status": "SIAP_RETRIEVAL",
+      "catatan": [],
+      "versi_preprocess": "1.0"
+    }
+  },
+  {
+    "id_pertanyaan": "A4-001",
+    "no": 8,
+    "penanya": "Anggota 4",
+    "sumber_kontribusi": "Anggota 4",
+    "pertanyaan": "Berapa persentase kehadiran minimal agar mahasiswa boleh mengikuti UAS?",
+    "jawaban": "80%",
+    "passage_id": [
+      "pa2020-III-K-1",
+      "pa2020-II-F-10",
+      "pa2020-II-F-9"
     ],
-    "versi_preprocess": "1.0"
+    "tipe": "PERSENTASE",
+    "jenis_pertanyaan": "BERAPA",
+    "bukti": "kehadiran kurang dari 80% dari total tatap muka (14 kali), tidak diperbolehkan mengikuti Ujian Akhir Semester (UAS)",
+    "bukti_per_passage": {
+      "pa2020-III-K-1": "Mahasiswa yang mengikuti kehadiran kurang dari 80% dari total tatap muka (14 kali), tidak diperbolehkan mengikuti Ujian Akhir Semester (UAS)",
+      "pa2020-II-F-10": "Bagi mahasiswa yang mengikuti kuliah kurang dari 80% tidak berhak mengikuti UAS",
+      "pa2020-II-F-9": "Telah mengikuti kehadiran minimal 80% dari perkuliahan yang diberikan oleh dosen"
+    },
+    "catatan": "Batas minimum kehadiran kuliah untuk berhak mengikuti UAS adalah 80%.",
+    "query": {
+      "pertanyaan": "Berapa persentase kehadiran minimal agar mahasiswa boleh mengikuti UAS?",
+      "normalisasi": "berapa persentase kehadiran minimal agar mahasiswa boleh mengikuti uas?",
+      "token": [
+        "berapa",
+        "persentase",
+        "kehadiran",
+        "minimal",
+        "agar",
+        "mahasiswa",
+        "boleh",
+        "mengikuti",
+        "uas"
+      ],
+      "token_pencarian": [
+        "persentase",
+        "kehadiran",
+        "minimal",
+        "agar",
+        "mahasiswa",
+        "boleh",
+        "mengikuti",
+        "uas"
+      ],
+      "kata_kunci": [
+        "persentase",
+        "kehadiran",
+        "minimal",
+        "agar",
+        "mahasiswa",
+        "boleh",
+        "mengikuti",
+        "uas"
+      ],
+      "query": "persentase kehadiran minimal agar mahasiswa boleh mengikuti uas",
+      "jenis_pertanyaan": "BERAPA",
+      "penanda_tanya": "berapa",
+      "tipe_jawaban": "PERSENTASE",
+      "aturan_tipe": "berapa disertai satuan persen",
+      "status": "SIAP_RETRIEVAL",
+      "catatan": [],
+      "versi_preprocess": "1.0"
+    }
+  },
+  {
+    "id_pertanyaan": "A4-002",
+    "no": 9,
+    "penanya": "Anggota 4",
+    "sumber_kontribusi": "Anggota 4",
+    "pertanyaan": "Berapa menit batas maksimal keterlambatan mengikuti ujian?",
+    "jawaban": "15 menit",
+    "passage_id": [
+      "tatatertib-X-S1-3"
+    ],
+    "tipe": "DURASI",
+    "jenis_pertanyaan": "BERAPA",
+    "bukti": "keterlambatan dengan alasan tertentu maksimal 15 (lima belas) menit",
+    "catatan": "Tata Tertib Pelaksanaan Ujian FILKOM UB.",
+    "query": {
+      "pertanyaan": "Berapa menit batas maksimal keterlambatan mengikuti ujian?",
+      "normalisasi": "berapa menit batas maksimal keterlambatan mengikuti ujian?",
+      "token": [
+        "berapa",
+        "menit",
+        "batas",
+        "maksimal",
+        "keterlambatan",
+        "mengikuti",
+        "ujian"
+      ],
+      "token_pencarian": [
+        "menit",
+        "batas",
+        "maksimal",
+        "keterlambatan",
+        "mengikuti",
+        "ujian"
+      ],
+      "kata_kunci": [
+        "menit",
+        "batas",
+        "maksimal",
+        "keterlambatan",
+        "mengikuti",
+        "ujian"
+      ],
+      "query": "menit batas maksimal keterlambatan mengikuti ujian",
+      "jenis_pertanyaan": "BERAPA",
+      "penanda_tanya": "berapa",
+      "tipe_jawaban": "DURASI",
+      "aturan_tipe": "objek hitungan berupa lama waktu",
+      "status": "SIAP_RETRIEVAL",
+      "catatan": [],
+      "versi_preprocess": "1.0"
+    }
+  },
+  {
+    "id_pertanyaan": "A4-003",
+    "no": 10,
+    "penanya": "Anggota 4",
+    "sumber_kontribusi": "Anggota 4",
+    "pertanyaan": "Berapa bobot nilai huruf B+?",
+    "jawaban": "3,5",
+    "passage_id": [
+      "pa2020-bobot-2",
+      "penilaian-bobot-2"
+    ],
+    "tipe": "ANGKA",
+    "jenis_pertanyaan": "BERAPA",
+    "bukti": "nilai huruf B+ memiliki bobot 3,5",
+    "bukti_per_passage": {
+      "pa2020-bobot-2": "nilai huruf B+ memiliki bobot 3,5",
+      "penilaian-bobot-2": "nilai huruf B+ memiliki bobot 3,5"
+    },
+    "catatan": "Dua sumber memberi bobot yang sama.",
+    "query": {
+      "pertanyaan": "Berapa bobot nilai huruf B+?",
+      "normalisasi": "berapa bobot nilai huruf b+?",
+      "token": [
+        "berapa",
+        "bobot",
+        "nilai",
+        "huruf",
+        "b+"
+      ],
+      "token_pencarian": [
+        "bobot",
+        "nilai",
+        "huruf",
+        "b+"
+      ],
+      "kata_kunci": [
+        "bobot",
+        "nilai",
+        "huruf",
+        "b+"
+      ],
+      "query": "bobot nilai huruf b+",
+      "jenis_pertanyaan": "BERAPA",
+      "penanda_tanya": "berapa",
+      "tipe_jawaban": "ANGKA",
+      "aturan_tipe": "objek hitungan numerik",
+      "status": "SIAP_RETRIEVAL",
+      "catatan": [],
+      "versi_preprocess": "1.0"
+    }
+  },
+  {
+    "id_pertanyaan": "A4-004",
+    "no": 11,
+    "penanya": "Anggota 4",
+    "sumber_kontribusi": "Anggota 4",
+    "pertanyaan": "Siapa yang menetapkan pengecualian Dosen Pembimbing Skripsi?",
+    "jawaban": "Dekan",
+    "passage_id": [
+      "pa2020-VI-A-11"
+    ],
+    "tipe": "JABATAN",
+    "jenis_pertanyaan": "SIAPA",
+    "bukti": "atas usul Ketua Program Studi dengan persetujuan Ketua Jurusan dan ditetapkan oleh Dekan",
+    "catatan": "Dekan adalah pihak yang menetapkan.",
+    "query": {
+      "pertanyaan": "Siapa yang menetapkan pengecualian Dosen Pembimbing Skripsi?",
+      "normalisasi": "siapa yang menetapkan pengecualian dosen pembimbing skripsi?",
+      "token": [
+        "siapa",
+        "yang",
+        "menetapkan",
+        "pengecualian",
+        "dosen",
+        "pembimbing",
+        "skripsi"
+      ],
+      "token_pencarian": [
+        "menetapkan",
+        "pengecualian",
+        "dosen",
+        "pembimbing",
+        "skripsi"
+      ],
+      "kata_kunci": [
+        "menetapkan",
+        "pengecualian",
+        "dosen",
+        "pembimbing",
+        "skripsi"
+      ],
+      "query": "menetapkan pengecualian dosen pembimbing skripsi",
+      "jenis_pertanyaan": "SIAPA",
+      "penanda_tanya": "siapa",
+      "tipe_jawaban": "JABATAN",
+      "aturan_tipe": "siapa tanpa permintaan nama; asumsi domain akademik",
+      "status": "SIAP_RETRIEVAL",
+      "catatan": [
+        "Korpus terutama memuat jabatan. Pemetaan SIAPA ke JABATAN adalah heuristik, bukan NER."
+      ],
+      "versi_preprocess": "1.0"
+    }
+  },
+  {
+    "id_pertanyaan": "FARIS-001",
+    "no": 12,
+    "penanya": "Faris",
+    "sumber_kontribusi": "Faris",
+    "pertanyaan": "Berapa semester kumulatif yang harus ditempuh untuk evaluasi keberhasilan studi akhir tahun pertama?",
+    "jawaban": "2 semester kumulatif",
+    "passage_id": [
+      "pa2020-II-I-3",
+      "pa2020-II-I-1"
+    ],
+    "tipe": "DURASI",
+    "jenis_pertanyaan": "BERAPA",
+    "bukti": "setelah mahasiswa menempuh pendidikan selama dua semester kumulatif",
+    "bukti_per_passage": {
+      "pa2020-II-I-3": "setelah mahasiswa menempuh pendidikan selama dua semester kumulatif",
+      "pa2020-II-I-1": "Akhir tahun pertama (dua semester)"
+    },
+    "catatan": "Dihitung sejak pertama kali terdaftar dan tidak termasuk cuti akademik.",
+    "query": {
+      "pertanyaan": "Berapa semester kumulatif yang harus ditempuh untuk evaluasi keberhasilan studi akhir tahun pertama?",
+      "normalisasi": "berapa semester kumulatif yang harus ditempuh untuk evaluasi keberhasilan studi akhir tahun pertama?",
+      "token": [
+        "berapa",
+        "semester",
+        "kumulatif",
+        "yang",
+        "harus",
+        "ditempuh",
+        "untuk",
+        "evaluasi",
+        "keberhasilan",
+        "studi",
+        "akhir",
+        "tahun",
+        "pertama"
+      ],
+      "token_pencarian": [
+        "semester",
+        "kumulatif",
+        "harus",
+        "ditempuh",
+        "evaluasi",
+        "keberhasilan",
+        "studi",
+        "akhir",
+        "tahun",
+        "pertama"
+      ],
+      "kata_kunci": [
+        "semester",
+        "kumulatif",
+        "harus",
+        "ditempuh",
+        "evaluasi",
+        "keberhasilan",
+        "studi",
+        "akhir",
+        "tahun",
+        "pertama"
+      ],
+      "query": "semester kumulatif harus ditempuh evaluasi keberhasilan studi akhir tahun pertama",
+      "jenis_pertanyaan": "BERAPA",
+      "penanda_tanya": "berapa",
+      "tipe_jawaban": "DURASI",
+      "aturan_tipe": "objek hitungan berupa lama waktu",
+      "status": "SIAP_RETRIEVAL",
+      "catatan": [],
+      "versi_preprocess": "1.0"
+    }
+  },
+  {
+    "id_pertanyaan": "FARIS-002",
+    "no": 13,
+    "penanya": "Faris",
+    "sumber_kontribusi": "Faris",
+    "pertanyaan": "Berapa lama maksimal cuti akademik dan/atau terminal kuliah kumulatif untuk mahasiswa sarjana?",
+    "jawaban": "2 tahun kumulatif",
+    "passage_id": [
+      "pa2020-III-G-4"
+    ],
+    "tipe": "DURASI",
+    "jenis_pertanyaan": "BERAPA",
+    "bukti": "paling lama dua tahun kumulatif",
+    "catatan": "Aturan menyebut jenjang sarjana.",
+    "query": {
+      "pertanyaan": "Berapa lama maksimal cuti akademik dan/atau terminal kuliah kumulatif untuk mahasiswa sarjana?",
+      "normalisasi": "berapa lama maksimal cuti akademik dan/atau terminal kuliah kumulatif untuk mahasiswa sarjana?",
+      "token": [
+        "berapa",
+        "lama",
+        "maksimal",
+        "cuti",
+        "akademik",
+        "dan",
+        "/",
+        "atau",
+        "terminal",
+        "kuliah",
+        "kumulatif",
+        "untuk",
+        "mahasiswa",
+        "sarjana"
+      ],
+      "token_pencarian": [
+        "lama",
+        "maksimal",
+        "cuti",
+        "akademik",
+        "/",
+        "terminal",
+        "kuliah",
+        "kumulatif",
+        "mahasiswa",
+        "sarjana"
+      ],
+      "kata_kunci": [
+        "lama",
+        "maksimal",
+        "cuti",
+        "akademik",
+        "/",
+        "terminal",
+        "kuliah",
+        "kumulatif",
+        "mahasiswa",
+        "sarjana"
+      ],
+      "query": "lama maksimal cuti akademik / terminal kuliah kumulatif mahasiswa sarjana",
+      "jenis_pertanyaan": "BERAPA",
+      "penanda_tanya": "berapa",
+      "tipe_jawaban": "DURASI",
+      "aturan_tipe": "objek hitungan berupa lama waktu",
+      "status": "SIAP_RETRIEVAL",
+      "catatan": [],
+      "versi_preprocess": "1.0"
+    }
+  },
+  {
+    "id_pertanyaan": "FARIS-003",
+    "no": 14,
+    "penanya": "Faris",
+    "sumber_kontribusi": "Faris",
+    "pertanyaan": "Berapa sks minimal yang harus dikumpulkan untuk menempuh ujian skripsi?",
+    "jawaban": "138 sks",
+    "passage_id": [
+      "pa2020-VI-D-4"
+    ],
+    "tipe": "ANGKA",
+    "jenis_pertanyaan": "BERAPA",
+    "bukti": "telah mengumpulkan minimal 138 sks",
+    "catatan": "Selain sks, butir tersebut mencantumkan syarat akademik dan administrasi lain.",
+    "query": {
+      "pertanyaan": "Berapa sks minimal yang harus dikumpulkan untuk menempuh ujian skripsi?",
+      "normalisasi": "berapa sks minimal yang harus dikumpulkan untuk menempuh ujian skripsi?",
+      "token": [
+        "berapa",
+        "sks",
+        "minimal",
+        "yang",
+        "harus",
+        "dikumpulkan",
+        "untuk",
+        "menempuh",
+        "ujian",
+        "skripsi"
+      ],
+      "token_pencarian": [
+        "sks",
+        "minimal",
+        "harus",
+        "dikumpulkan",
+        "menempuh",
+        "ujian",
+        "skripsi"
+      ],
+      "kata_kunci": [
+        "sks",
+        "minimal",
+        "harus",
+        "dikumpulkan",
+        "menempuh",
+        "ujian",
+        "skripsi"
+      ],
+      "query": "sks minimal harus dikumpulkan menempuh ujian skripsi",
+      "jenis_pertanyaan": "BERAPA",
+      "penanda_tanya": "berapa",
+      "tipe_jawaban": "ANGKA",
+      "aturan_tipe": "objek hitungan numerik",
+      "status": "SIAP_RETRIEVAL",
+      "catatan": [],
+      "versi_preprocess": "1.0"
+    }
+  },
+  {
+    "id_pertanyaan": "FARIS-004",
+    "no": 15,
+    "penanya": "Faris",
+    "sumber_kontribusi": "Faris",
+    "pertanyaan": "Berapa hari kalender maksimal untuk menyelesaikan revisi skripsi sejak tanggal kelulusan ujian skripsi?",
+    "jawaban": "30 hari kalender",
+    "passage_id": [
+      "pa2020-VI-D-13"
+    ],
+    "tipe": "DURASI",
+    "jenis_pertanyaan": "BERAPA",
+    "bukti": "Revisi skripsi paling lama 30 (tiga puluh) hari kalender terhitung dari tanggal kelulusan ujian skripsi",
+    "catatan": "Dihitung dari tanggal kelulusan ujian skripsi.",
+    "query": {
+      "pertanyaan": "Berapa hari kalender maksimal untuk menyelesaikan revisi skripsi sejak tanggal kelulusan ujian skripsi?",
+      "normalisasi": "berapa hari kalender maksimal untuk menyelesaikan revisi skripsi sejak tanggal kelulusan ujian skripsi?",
+      "token": [
+        "berapa",
+        "hari",
+        "kalender",
+        "maksimal",
+        "untuk",
+        "menyelesaikan",
+        "revisi",
+        "skripsi",
+        "sejak",
+        "tanggal",
+        "kelulusan",
+        "ujian",
+        "skripsi"
+      ],
+      "token_pencarian": [
+        "hari",
+        "kalender",
+        "maksimal",
+        "menyelesaikan",
+        "revisi",
+        "skripsi",
+        "sejak",
+        "tanggal",
+        "kelulusan",
+        "ujian",
+        "skripsi"
+      ],
+      "kata_kunci": [
+        "hari",
+        "kalender",
+        "maksimal",
+        "menyelesaikan",
+        "revisi",
+        "skripsi",
+        "sejak",
+        "tanggal",
+        "kelulusan",
+        "ujian"
+      ],
+      "query": "hari kalender maksimal menyelesaikan revisi skripsi sejak tanggal kelulusan ujian skripsi",
+      "jenis_pertanyaan": "BERAPA",
+      "penanda_tanya": "berapa",
+      "tipe_jawaban": "DURASI",
+      "aturan_tipe": "objek hitungan berupa lama waktu",
+      "status": "SIAP_RETRIEVAL",
+      "catatan": [],
+      "versi_preprocess": "1.0"
+    }
+  },
+  {
+    "id_pertanyaan": "SUP-001",
+    "no": 16,
+    "penanya": "Kontribusi tambahan",
+    "sumber_kontribusi": "Tambahan Anggota 5",
+    "pertanyaan": "Kapan ujian susulan dilaksanakan paling lambat setelah UTS atau UAS?",
+    "jawaban": "Maksimal satu minggu setelah pelaksanaan UTS atau UAS.",
+    "passage_id": [
+      "tatatertib-X-S1-19"
+    ],
+    "tipe": "WAKTU",
+    "jenis_pertanyaan": "KAPAN",
+    "bukti": "Ujian susulan dilaksanakan maksimal satu minggu setelah pelaksanaan UTS atau UAS",
+    "catatan": "Mengacu pada tata tertib ujian di korpus.",
+    "query": {
+      "pertanyaan": "Kapan ujian susulan dilaksanakan paling lambat setelah UTS atau UAS?",
+      "normalisasi": "kapan ujian susulan dilaksanakan paling lambat setelah uts atau uas?",
+      "token": [
+        "kapan",
+        "ujian",
+        "susulan",
+        "dilaksanakan",
+        "paling",
+        "lambat",
+        "setelah",
+        "uts",
+        "atau",
+        "uas"
+      ],
+      "token_pencarian": [
+        "ujian",
+        "susulan",
+        "dilaksanakan",
+        "paling",
+        "lambat",
+        "setelah",
+        "uts",
+        "uas"
+      ],
+      "kata_kunci": [
+        "ujian",
+        "susulan",
+        "dilaksanakan",
+        "paling",
+        "lambat",
+        "setelah",
+        "uts",
+        "uas"
+      ],
+      "query": "ujian susulan dilaksanakan paling lambat setelah uts uas",
+      "jenis_pertanyaan": "KAPAN",
+      "penanda_tanya": "kapan",
+      "tipe_jawaban": "WAKTU",
+      "aturan_tipe": "kapan: tanggal, tahun, atau peristiwa awal/akhir",
+      "status": "SIAP_RETRIEVAL",
+      "catatan": [
+        "Kalender akademik tidak tersedia; fakta tahun atau peristiwa mungkin tersedia."
+      ],
+      "versi_preprocess": "1.0"
+    }
+  },
+  {
+    "id_pertanyaan": "SUP-002",
+    "no": 17,
+    "penanya": "Kontribusi tambahan",
+    "sumber_kontribusi": "Tambahan Anggota 5",
+    "pertanyaan": "Berapa SKS lulus minimal yang harus dikumpulkan untuk dapat melanjutkan setelah evaluasi tahun kedua?",
+    "jawaban": "48 sks lulus",
+    "passage_id": [
+      "pa2020-II-I-4"
+    ],
+    "tipe": "ANGKA",
+    "jenis_pertanyaan": "BERAPA",
+    "bukti": "mengumpulkan sekurang-kurangnya 48 sks lulus (tanpa nilai e)",
+    "catatan": "Korpus menyebutkan syarat lain berupa IPK sekurang-kurangnya 2,00.",
+    "query": {
+      "pertanyaan": "Berapa SKS lulus minimal yang harus dikumpulkan untuk dapat melanjutkan setelah evaluasi tahun kedua?",
+      "normalisasi": "berapa sks lulus minimal yang harus dikumpulkan untuk dapat melanjutkan setelah evaluasi tahun kedua?",
+      "token": [
+        "berapa",
+        "sks",
+        "lulus",
+        "minimal",
+        "yang",
+        "harus",
+        "dikumpulkan",
+        "untuk",
+        "dapat",
+        "melanjutkan",
+        "setelah",
+        "evaluasi",
+        "tahun",
+        "kedua"
+      ],
+      "token_pencarian": [
+        "sks",
+        "lulus",
+        "minimal",
+        "harus",
+        "dikumpulkan",
+        "dapat",
+        "melanjutkan",
+        "setelah",
+        "evaluasi",
+        "tahun",
+        "kedua"
+      ],
+      "kata_kunci": [
+        "sks",
+        "lulus",
+        "minimal",
+        "harus",
+        "dikumpulkan",
+        "dapat",
+        "melanjutkan",
+        "setelah",
+        "evaluasi",
+        "tahun",
+        "kedua"
+      ],
+      "query": "sks lulus minimal harus dikumpulkan dapat melanjutkan setelah evaluasi tahun kedua",
+      "jenis_pertanyaan": "BERAPA",
+      "penanda_tanya": "berapa",
+      "tipe_jawaban": "ANGKA",
+      "aturan_tipe": "objek hitungan numerik",
+      "status": "SIAP_RETRIEVAL",
+      "catatan": [],
+      "versi_preprocess": "1.0"
+    }
+  },
+  {
+    "id_pertanyaan": "SUP-003",
+    "no": 18,
+    "penanya": "Kontribusi tambahan",
+    "sumber_kontribusi": "Tambahan Anggota 5",
+    "pertanyaan": "Apa nilai huruf tertinggi yang dapat diberikan pada ujian khusus?",
+    "jawaban": "C",
+    "passage_id": [
+      "pa2020-II-F-4"
+    ],
+    "tipe": "NILAI_HURUF",
+    "jenis_pertanyaan": "BERAPA",
+    "bukti": "nilai akhir maksimum C",
+    "catatan": "Ujian khusus hanya berlaku untuk kondisi akademik yang dijelaskan di passage.",
+    "query": {
+      "pertanyaan": "Apa nilai huruf tertinggi yang dapat diberikan pada ujian khusus?",
+      "normalisasi": "apa nilai huruf tertinggi yang dapat diberikan pada ujian khusus?",
+      "token": [
+        "apa",
+        "nilai",
+        "huruf",
+        "tertinggi",
+        "yang",
+        "dapat",
+        "diberikan",
+        "pada",
+        "ujian",
+        "khusus"
+      ],
+      "token_pencarian": [
+        "nilai",
+        "huruf",
+        "tertinggi",
+        "dapat",
+        "diberikan",
+        "ujian",
+        "khusus"
+      ],
+      "kata_kunci": [
+        "nilai",
+        "huruf",
+        "tertinggi",
+        "dapat",
+        "diberikan",
+        "ujian",
+        "khusus"
+      ],
+      "query": "nilai huruf tertinggi dapat diberikan ujian khusus",
+      "jenis_pertanyaan": "APA",
+      "penanda_tanya": "apa",
+      "tipe_jawaban": "NILAI_HURUF",
+      "aturan_tipe": "target konversi ke huruf",
+      "status": "SIAP_RETRIEVAL",
+      "catatan": [],
+      "versi_preprocess": "1.0"
+    }
+  },
+  {
+    "id_pertanyaan": "SUP-004",
+    "no": 19,
+    "penanya": "Kontribusi tambahan",
+    "sumber_kontribusi": "Tambahan Anggota 5",
+    "pertanyaan": "Berapa lama masa percobaan mahasiswa alih program?",
+    "jawaban": "2 semester",
+    "passage_id": [
+      "pa2020-III-H-7"
+    ],
+    "tipe": "DURASI",
+    "jenis_pertanyaan": "BERAPA",
+    "bukti": "harus menjalani masa percobaan selama dua semester",
+    "catatan": "Passage yang sama juga menyebut keharusan mengumpulkan 20 sks dengan IPK ≥ 2,00.",
+    "query": {
+      "pertanyaan": "Berapa lama masa percobaan mahasiswa alih program?",
+      "normalisasi": "berapa lama masa percobaan mahasiswa alih program?",
+      "token": [
+        "berapa",
+        "lama",
+        "masa",
+        "percobaan",
+        "mahasiswa",
+        "alih",
+        "program"
+      ],
+      "token_pencarian": [
+        "lama",
+        "masa",
+        "percobaan",
+        "mahasiswa",
+        "alih",
+        "program"
+      ],
+      "kata_kunci": [
+        "lama",
+        "masa",
+        "percobaan",
+        "mahasiswa",
+        "alih",
+        "program"
+      ],
+      "query": "lama masa percobaan mahasiswa alih program",
+      "jenis_pertanyaan": "BERAPA",
+      "penanda_tanya": "berapa",
+      "tipe_jawaban": "DURASI",
+      "aturan_tipe": "objek hitungan berupa lama waktu",
+      "status": "SIAP_RETRIEVAL",
+      "catatan": [],
+      "versi_preprocess": "1.0"
+    }
+  },
+  {
+    "id_pertanyaan": "SUP-005",
+    "no": 20,
+    "penanya": "Kontribusi tambahan",
+    "sumber_kontribusi": "Tambahan Anggota 5",
+    "pertanyaan": "Berapa sks beban studi maksimum untuk mahasiswa dengan IP semester sebelumnya minimal 3,00?",
+    "jawaban": "24 sks",
+    "passage_id": [
+      "pa2020-tabel1-1"
+    ],
+    "tipe": "ANGKA",
+    "jenis_pertanyaan": "BERAPA",
+    "bukti": "Jika Indeks Prestasi (IP) semester sebelumnya IP ≥ 3,00, beban studi maksimum yang boleh diambil pada semester berikutnya adalah 24 sks",
+    "catatan": "Beban maksimum untuk semester berikutnya.",
+    "query": {
+      "pertanyaan": "Berapa sks beban studi maksimum untuk mahasiswa dengan IP semester sebelumnya minimal 3,00?",
+      "normalisasi": "berapa sks beban studi maksimum untuk mahasiswa dengan ip semester sebelumnya minimal 3,00?",
+      "token": [
+        "berapa",
+        "sks",
+        "beban",
+        "studi",
+        "maksimum",
+        "untuk",
+        "mahasiswa",
+        "dengan",
+        "ip",
+        "semester",
+        "sebelumnya",
+        "minimal",
+        "3,00"
+      ],
+      "token_pencarian": [
+        "sks",
+        "beban",
+        "studi",
+        "maksimum",
+        "mahasiswa",
+        "ip",
+        "semester",
+        "sebelumnya",
+        "minimal",
+        "3,00"
+      ],
+      "kata_kunci": [
+        "sks",
+        "beban",
+        "studi",
+        "maksimum",
+        "mahasiswa",
+        "ip",
+        "semester",
+        "sebelumnya",
+        "minimal",
+        "3,00"
+      ],
+      "query": "sks beban studi maksimum mahasiswa ip semester sebelumnya minimal 3,00",
+      "jenis_pertanyaan": "BERAPA",
+      "penanda_tanya": "berapa",
+      "tipe_jawaban": "ANGKA",
+      "aturan_tipe": "objek hitungan numerik",
+      "status": "SIAP_RETRIEVAL",
+      "catatan": [],
+      "versi_preprocess": "1.0"
+    }
   }
 ]

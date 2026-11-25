@@ -1,7 +1,6 @@
 # Demo web (FastAPI + htmx)
 
-Lapisan demo untuk pipeline Anggota 2-4. Tidak ada berkas Anggota 1-6 yang diubah;
-`web/pipeline.py` hanya memanggil API publik tahap sebelumnya.
+Demo menjalankan pemrosesan, retrieval, dan ekstraksi melalui modul Python. `web/pipeline.py` membaca artefak korpus serta evaluasi yang sudah tersedia. `web/korpus.py` menyediakan ekstraksi PDF untuk regenerasi korpus dari Python. Demo dapat dijalankan tanpa Jupyter.
 
 ## Jalankan
 

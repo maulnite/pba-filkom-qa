@@ -194,9 +194,7 @@ Bagian ini perlu disebut di laporan (Bab I batasan masalah, Bab IV implementasi)
 ## 9. Membuat ulang korpus
 
 ```powershell
-cd "Tugas Akhir/Anggota1_Korpus"
-uv sync
-uv run jupyter nbconvert --to notebook --execute --inplace Anggota1_Korpus.ipynb
+uv run --locked --group notebook jupyter nbconvert --to notebook --execute --inplace Anggota1_Korpus/Anggota1_Korpus.ipynb
 ```
 
-Atau buka `Anggota1_Korpus.ipynb` dengan kernel `.venv`, lalu pilih *Run All*. Bagian akhir notebook menjalankan validasi otomatis: ID unik, panjang passage, urutan penanda, jumlah angka `sks`, dan keberadaan 16 fakta kunci.
+Jalankan dari root proyek. Notebook membentuk passage dari PDF, memeriksa keunikan ID, lalu menyimpan `output/passages.jsonl` dan `output/dokumen.json`.

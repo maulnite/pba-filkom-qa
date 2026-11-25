@@ -48,4 +48,5 @@ Keluaran berisi `jawaban`, `metode` (`simbolik`, `linguistik_udpipe`, atau `fall
 - `ekstraksi.py`: router Hybrid, pemroses dependency tree UDPipe, dan skoring proximity.
 - `data/pertanyaan_anggota4.json`: 4 pertanyaan evaluasi rujukan beserta `passage_id` bukti.
 - `uji_ekstraksi.py`: pemeriksaan otomatis komponen simbolik, 11 soal rujukan isolasi, dan 4 soal end-to-end.
-- `Anggota4_Jawaban.ipynb`: notebook demonstrasi dan evaluasi.
+- `Anggota4_Jawaban.ipynb`: mengekstrak jawaban dari lima kandidat keluaran Anggota 3 untuk setiap soal.
+- `output/hasil_ekstraksi.json`: jawaban, metode, dan sumber per ID pertanyaan.

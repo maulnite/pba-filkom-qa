@@ -5,7 +5,7 @@ Bagian ini menyiapkan 20 pertanyaan factoid dan mengukur apakah retrieval TF-IDF
 ## Berkas
 
 - [`data/pertanyaan_uji.json`](data/pertanyaan_uji.json) berisi 20 pertanyaan, jawaban rujukan, kutipan, dan satu atau lebih ID passage relevan. ID yang memiliki bukti alternatif tetap dicantumkan. `bukti_per_passage` memuat kutipan verbatim per ID alternatif.
-- [`Anggota5_Evaluasi_Retrieval.ipynb`](Anggota5_Evaluasi_Retrieval.ipynb) memeriksa ID dan kutipan, menjalankan modul Anggota 2 dan 3, menampilkan peringkat bukti setiap soal, dan mengekspor hasil.
+- [`Anggota5_Evaluasi_Retrieval.ipynb`](Anggota5_Evaluasi_Retrieval.ipynb) membaca urutan kandidat Anggota 3 dan menghitung peringkat serta metrik dari ID bukti.
 - [`output/hasil_retrieval.json`](output/hasil_retrieval.json) menyimpan hasil per ID pertanyaan, lima kandidat berurutan lengkap dengan field passage dan metadata sumber dari API Anggota 3, peringkat bukti pertama, dan metrik.
 
 Jalankan `uv sync --locked --group notebook` dari root repositori. Buka notebook, pilih kernel Python dari `.venv`, lalu jalankan **Run All** dengan direktori kerja `Anggota5_Evaluasi_Retrieval`. Untuk menjalankan semua sel dan menyimpan keluarannya dari terminal, gunakan perintah berikut dari root repositori. Nbconvert memakai direktori notebook saat menjalankan sel.
@@ -14,7 +14,7 @@ Jalankan `uv sync --locked --group notebook` dari root repositori. Buka notebook
 uv run --locked --group notebook jupyter nbconvert --to notebook --execute --inplace Anggota5_Evaluasi_Retrieval/Anggota5_Evaluasi_Retrieval.ipynb
 ```
 
-Bagian **Contoh jawaban bot** menampilkan keluaran ekstraktor Anggota 4 dan jawaban rujukan untuk satu soal. Ubah `id_contoh` untuk mencoba ID lain dari tabel. Bagian ini menggunakan model UDPipe Indonesia yang diunduh pada pemakaian pertama.
+Bagian **Jawaban Bot** menampilkan jawaban yang diekspor Anggota 4 bersama rujukan dan peringkat bukti. Ubah `id_contoh` untuk mencoba ID lain dari tabel.
 
 ## Definisi metrik
 
@@ -45,4 +45,4 @@ Pertanyaan definisi hanya menghasilkan token “skripsi”, yang juga muncul di 
 
 ## Masukan untuk Anggota 6
 
-Gunakan `hasil_per_pertanyaan` dari [hasil retrieval](output/hasil_retrieval.json). Untuk tiap baris, panggil `proses_pertanyaan(baris["pertanyaan"])` dan teruskan hasilnya bersama `baris["kandidat_top5"]` ke `EkstraktorJawaban.ekstrak`. Gunakan `id_pertanyaan` untuk mencocokkan hasil dengan `jawaban_rujukan` dan `peringkat_bukti_pertama`.
+Gabungkan `hasil_per_pertanyaan` dari [hasil retrieval](output/hasil_retrieval.json) dengan [jawaban Anggota 4](../Anggota4/output/hasil_ekstraksi.json) berdasarkan `id_pertanyaan`.
