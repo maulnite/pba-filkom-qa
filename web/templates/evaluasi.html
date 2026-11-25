@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% block judul %}Evaluasi · Demo Tanya Jawab Akademik FILKOM{% endblock %}
+{% block isi %}
+<section class="pembuka">
+  <h1>Evaluasi pada 20 pertanyaan uji</h1>
+  <p class="pembuka-sub">Angka dari keluaran Anggota 5 (retrieval) dan Anggota 6 (jawaban akhir).</p>
+</section>
+
+<dl class="strip">
+  <div>
+    <dt>Hit@5</dt>
+    <dd>{{ '%.0f%%'|format(ringkasan_retrieval.hit_at_5 * 100) }}</dd>
+    <dd class="strip-ket">{{ ringkasan_retrieval.hit_at_5_jumlah }} dari {{ ringkasan_retrieval.jumlah_pertanyaan }}</dd>
+  </div>
+  <div>
+    <dt>MRR</dt>
+    <dd>{{ '%.3f'|format(ringkasan_retrieval.mrr) }}</dd>
+    <dd class="strip-ket">peringkat bukti pertama</dd>
+  </div>
+  <div>
+    <dt>Akurasi ketat</dt>
+    <dd>{{ '%.0f%%'|format(ringkasan_jawaban.akurasi_persis * 100) }}</dd>
+    <dd class="strip-ket">{{ ringkasan_jawaban.jumlah_persis }} cocok persis</dd>
+  </div>
+  <div>
+    <dt>Akurasi inti</dt>
+    <dd>{{ '%.0f%%'|format(ringkasan_jawaban.akurasi_inti * 100) }}</dd>
+    <dd class="strip-ket">{{ ringkasan_jawaban.jumlah_cocok_inti }} termasuk cocok sebagian</dd>
+  </div>
+  <div>
+    <dt>Akurasi longgar</dt>
+    <dd>{{ '%.0f%%'|format(ringkasan_jawaban.akurasi_longgar * 100) }}</dd>
+    <dd class="strip-ket">{{ ringkasan_jawaban.jumlah_benar_longgar }} termasuk parafrasa</dd>
+  </div>
+  <div>
+    <dt>F1 token</dt>
+    <dd>{{ '%.3f'|format(ringkasan_jawaban.f1_token_macro) }}</dd>
+    <dd class="strip-ket">macro 20 soal</dd>
+  </div>
+</dl>
+
+<div class="dua-kolom">
+  <section>
+    <h2 class="bagian">Per tipe jawaban</h2>
+    <table class="tabel">
+      <thead><tr><th>tipe</th><th class="kanan">n</th><th class="kanan">ketat</th><th class="kanan">inti</th><th class="kanan">longgar</th></tr></thead>
+      <tbody>
+      {% for tipe, m in ringkasan_jawaban.per_tipe_jawaban.items() %}
+        <tr>
+          <td class="angka">{{ tipe }}</td>
+          <td class="kanan angka">{{ m.jumlah }}</td>
+          <td class="kanan angka">{{ '%.0f%%'|format(m.akurasi_persis * 100) }}</td>
+          <td class="kanan angka">{{ '%.0f%%'|format(m.akurasi_inti * 100) }}</td>
+          <td class="kanan angka">{{ '%.0f%%'|format(m.akurasi_longgar * 100) }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2 class="bagian">Per metode ekstraksi</h2>
+    <table class="tabel">
+      <thead><tr><th>metode</th><th class="kanan">n</th><th class="kanan">ketat</th><th class="kanan">inti</th><th class="kanan">longgar</th></tr></thead>
+      <tbody>
+      {% for metode, m in ringkasan_jawaban.per_metode.items() %}
+        <tr>
+          <td class="angka">{{ metode }}</td>
+          <td class="kanan angka">{{ m.jumlah }}</td>
+          <td class="kanan angka">{{ '%.0f%%'|format(m.akurasi_persis * 100) }}</td>
+          <td class="kanan angka">{{ '%.0f%%'|format(m.akurasi_inti * 100) }}</td>
+          <td class="kanan angka">{{ '%.0f%%'|format(m.akurasi_longgar * 100) }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </section>
+</div>
+
+<section class="rincian-soal">
+  <h2 class="bagian">Rincian 20 pertanyaan</h2>
+  <div class="tabel-gulir">
+  <table class="tabel lebar">
+    <colgroup>
+      <col class="kol-no"><col class="kol-tanya"><col class="kol-bukti"><col class="kol-tingkat"><col class="kol-jawab"><col class="kol-jawab">
+    </colgroup>
+    <thead>
+      <tr><th class="kanan">#</th><th>pertanyaan</th><th class="kanan">bukti</th><th>tingkat</th><th>jawaban sistem</th><th>rujukan</th></tr>
+    </thead>
+    <tbody>
+    {% for b in baris %}
+      <tr>
+        <td class="kanan angka">{{ loop.index }}</td>
+        <td>{{ b.pertanyaan }}<span class="baris-meta angka">{{ b.tipe }} · {{ b.metode }}</span></td>
+        <td class="kanan angka">{{ b.peringkat_bukti if b.peringkat_bukti else '—' }}</td>
+        <td><span class="tingkat tingkat-{{ b.tingkat|lower }}">{{ b.tingkat.replace('_', ' ')|lower }}</span></td>
+        <td>{{ b.jawaban_sistem or '—' }}</td>
+        <td class="rujukan">{{ b.jawaban_rujukan }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  <p class="ket">{{ ringkasan_jawaban.catatan }}</p>
+</section>
+{% endblock %}

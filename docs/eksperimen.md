@@ -29,3 +29,19 @@ Peringkat dihitung dari kandidat berskor positif. Bukti pertama adalah kandidat 
 - **Rumus IP** berada di peringkat 25. Tabel beban studi memakai token IP dan semester berulang, sehingga beberapa baris tabel muncul lebih awal daripada rumus.
 
 Ulangi evaluasi dari root repositori dengan `uv run --locked python -m scripts.evaluasi_retrieval`. [Skrip evaluasi](../scripts/evaluasi_retrieval.py)
+
+## Evaluasi jawaban akhir
+
+Retrieval dan ekstraksi dinilai terpisah. Anggota 5 mengukur penemuan passage bukti; Anggota 6 menjalankan `EkstraktorJawaban` atas lima kandidat tiap soal lalu membandingkan jawabannya dengan jawaban rujukan. Perbandingan memakai normalisasi teks dan aturan empat tingkat: sama setelah normalisasi, muatan sebagian, parafrasa dengan F1 token ≥ 0,70, atau tidak cocok. [Modul penilaian](../Anggota6_Evaluasi_Jawaban/evaluasi_jawaban.py) · [Hasil per soal](../Anggota6_Evaluasi_Jawaban/output/hasil_evaluasi.json)
+
+| Metrik | Nilai |
+|---|---:|
+| Akurasi ketat (persis) | 8/20 (40,0%) |
+| Akurasi inti (persis + muatan) | 13/20 (65,0%) |
+| Akurasi longgar (ditambah parafrasa) | 15/20 (75,0%) |
+| F1 token macro | 0,696 |
+| Bukti di lima besar | 17/20 (85,0%), 13 di antaranya dijawab benar |
+
+Tiga soal gagal sejak retrieval (A2-003 peringkat 19, A2-004 peringkat 6, A3-003 peringkat 25). Dua soal gagal di ekstraksi walaupun bukti sudah peringkat satu: FARIS-003 mengambil angka lain pada passage yang sama, SUP-003 tidak punya pola simbolik untuk tipe NILAI_HURUF sehingga jatuh ke fallback kalimat. Jalur fallback belum menjawab benar satu pun dari empat soal, sedangkan jalur simbolik benar pada dua dari dua soal.
+
+Ulangi penilaian dari root repositori dengan `uv run --locked python -m Anggota6_Evaluasi_Jawaban.evaluasi_jawaban`.

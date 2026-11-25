@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block isi %}
+<section class="pembuka">
+  <h1>Cari bukti dan jawaban dari dokumen akademik FILKOM</h1>
+  <p class="pembuka-sub">Setiap jawaban menunjuk passage, dokumen, dan halaman sumbernya.</p>
+</section>
+
+{% if not status.udpipe_siap %}
+<p class="peringatan">Model UDPipe tidak siap. Pipeline berjalan dengan jalur simbolik dan fallback kalimat.</p>
+{% endif %}
+
+<form class="tanya" hx-post="/tanya" hx-target="#hasil" hx-swap="innerHTML" hx-indicator="#memuat">
+  <div class="tanya-baris">
+    <input id="pertanyaan" name="pertanyaan" type="text" autocomplete="off" required
+           aria-label="Pertanyaan"
+           placeholder="Berapa sks minimal untuk menyelesaikan studi sarjana?">
+    <button type="submit">Tanya</button>
+  </div>
+</form>
+
+<div id="memuat" class="memuat htmx-indicator">menjalankan pipeline…</div>
+<div id="hasil" class="hasil"></div>
+
+<div class="contoh-cepat">
+  <p class="contoh-label">contoh</p>
+  <div class="chip-baris">
+    {% for q in contoh[:4] %}
+    <button class="chip" type="button" data-pertanyaan="{{ q.pertanyaan }}">{{ q.pertanyaan }}</button>
+    {% endfor %}
+  </div>
+</div>
+
+<details class="lipat lipat-contoh">
+  <summary>Semua pertanyaan uji <span class="jumlah">{{ contoh|length }}</span></summary>
+  <div class="chip-baris">
+    {% for q in contoh[4:] %}
+    <button class="chip" type="button" data-pertanyaan="{{ q.pertanyaan }}">{{ q.no }}. {{ q.pertanyaan }}</button>
+    {% endfor %}
+  </div>
+</details>
+
+<script>
+document.querySelectorAll('.chip').forEach(function (chip) {
+  chip.addEventListener('click', function () {
+    document.getElementById('pertanyaan').value = chip.dataset.pertanyaan;
+    document.querySelector('.tanya').requestSubmit();
+  });
+});
+</script>
+{% endblock %}

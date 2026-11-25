@@ -1,0 +1,104 @@
+{% if galat %}
+<section class="pesan-galat">
+  <p class="eyebrow">pipeline berhenti</p>
+  <h2 class="galat-judul">{{ galat }}</h2>
+  <p class="ket">Gunakan kata tanya yang dikenali (apa, siapa, kapan, berapa, bagaimana, di mana) dan sebutkan objek akademik, misalnya “Berapa sks minimal untuk menyelesaikan studi sarjana?”.</p>
+</section>
+{% else %}
+<article class="jawab">
+  <p class="eyebrow">jawaban</p>
+  {% if jawaban.jawaban %}
+  <h2 class="jawaban-teks{{ ' panjang' if jawaban.jawaban|length > 90 else '' }}">{{ jawaban.jawaban }}</h2>
+  {% else %}
+  <h2 class="jawaban-teks kosong">Tidak ada jawaban ringkas untuk pertanyaan ini.</h2>
+  {% endif %}
+
+  <p class="meta-utama">
+    <span>{{ label_metode.get(jawaban.metode, jawaban.metode) }}</span>
+    <span class="pemisah">·</span>
+    <span>{{ jawaban.tipe_jawaban }}</span>
+    <span class="pemisah">·</span>
+    <span class="angka">{{ jawaban.status }}</span>
+  </p>
+
+  {% if jawaban.sumber %}<p class="sumber">{{ jawaban.sumber }}</p>{% endif %}
+
+  {% if jawaban.kutipan_ringkas %}
+  <blockquote class="kutipan">{{ jawaban.kutipan_ringkas }}</blockquote>
+  {% endif %}
+
+  {% if jawaban.catatan_galat %}<p class="peringatan">{{ jawaban.catatan_galat }}</p>{% endif %}
+
+  {% if uji and uji.jawaban %}
+  <p class="banding">Rujukan set uji: <b>{{ uji.jawaban }}</b></p>
+  {% endif %}
+</article>
+
+{% if kandidat %}
+<details class="lipat">
+  <summary>
+    Bukti passage <span class="jumlah">{{ kandidat|length }}</span>
+    <span class="ringkas-bukti">
+      {% set terpilih = kandidat|selectattr('terpilih')|first %}
+      {% if terpilih %}dipakai: <span class="angka">{{ terpilih.passage_id }}</span>{% if terpilih.halaman %}, hlm. {{ terpilih.halaman }}{% endif %}{% endif %}
+    </span>
+  </summary>
+  <ol class="kandidat">
+    {% for k in kandidat %}
+    <li class="kandidat-baris{{ ' terpilih' if k.terpilih else '' }}">
+      <p class="kandidat-kepala">
+        <span class="peringkat angka">{{ k.rank }}</span>
+        <span class="pid angka">{{ k.passage_id }}</span>
+        <span class="kandidat-tanda">{% if k.terpilih %}dipakai untuk jawaban{% elif k.bukti_rujukan %}bukti rujukan{% endif %}</span>
+        <span class="skor angka">{{ k.score }}</span>
+      </p>
+      <p class="kandidat-meta">{{ k.judul_dokumen }}{% if k.tahun %} ({{ k.tahun }}){% endif %}{% if k.halaman %}, hlm. {{ k.halaman }}{% endif %}{% if k.judul_subbab %} · {{ k.judul_subbab }}{% endif %}</p>
+      <p class="kandidat-teks{{ '' if k.terpilih else ' potong' }}">{% if k.terpilih %}{{ jawaban.kutipan }}{% else %}{{ k.cuplikan }}{% if k.terpotong %}…{% endif %}{% endif %}</p>
+      {% if k.url_halaman %}<a class="kandidat-tautan" href="{{ k.url_halaman }}" target="_blank" rel="noopener">buka hlm. {{ k.halaman }} di PDF</a>{% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+</details>
+{% else %}
+<p class="ket">Tidak ada passage dengan skor positif. Pertanyaan kemungkinan di luar cakupan korpus.</p>
+{% endif %}
+
+<details class="lipat">
+  <summary>Jejak pemrosesan</summary>
+  <dl class="rincian">
+    <div>
+      <dt>token pencarian</dt>
+      <dd class="token">{% for t in proses.token_pencarian %}<span class="angka">{{ t }}</span>{% else %}<em>tidak ada</em>{% endfor %}</dd>
+    </div>
+    <div>
+      <dt>penanda tanya</dt>
+      <dd class="angka">{{ proses.penanda_tanya or '—' }}</dd>
+    </div>
+    <div>
+      <dt>jenis pertanyaan</dt>
+      <dd class="angka">{{ proses.jenis_pertanyaan }}</dd>
+    </div>
+    <div>
+      <dt>aturan tipe jawaban</dt>
+      <dd>{{ proses.aturan_tipe }}</dd>
+    </div>
+    <div>
+      <dt>waktu</dt>
+      <dd class="angka">{{ waktu.proses_ms }} ms proses · {{ waktu.retrieval_ms }} ms retrieval · {{ waktu.ekstraksi_ms }} ms ekstraksi</dd>
+    </div>
+    <div>
+      <dt>korpus</dt>
+      <dd class="angka">{{ bendera.jumlah_passage }} passage · {{ bendera.jumlah_pertanyaan_uji }} pertanyaan uji</dd>
+    </div>
+  </dl>
+</details>
+
+{% if proses.catatan %}
+<details class="lipat">
+  <summary>Catatan sistem <span class="jumlah">{{ proses.catatan|length }}</span></summary>
+  <ul class="catatan">
+    {% for c in proses.catatan %}<li>{{ c }}</li>{% endfor %}
+  </ul>
+</details>
+{% endif %}
+{% endif %}

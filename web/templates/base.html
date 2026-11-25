@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block judul %}Demo Tanya Jawab Akademik FILKOM{% endblock %}</title>
+<link rel="stylesheet" href="/static/style.css">
+<script src="/static/htmx.min.js" defer></script>
+</head>
+<body>
+<header class="puncak">
+  <a class="merek" href="/">PBA FILKOM</a>
+  <nav class="nav">
+    <a href="/" class="{{ 'aktif' if halaman == 'demo' else '' }}">Demo</a>
+    <a href="/evaluasi" class="{{ 'aktif' if halaman == 'evaluasi' else '' }}">Evaluasi</a>
+    <a href="/sehat" target="_blank" rel="noopener">Status</a>
+  </nav>
+</header>
+<main class="wadah">
+{% block isi %}{% endblock %}
+</main>
+<footer class="kaki">
+  <p>Tanya jawab factoid dari Pedoman Akademik FILKOM 2020, Tata Tertib UTS/UAS, dan Pedoman Penilaian PTIIK 2015. 440 passage, 20 pertanyaan uji, tanpa LLM.</p>
+</footer>
+</body>
+</html>
