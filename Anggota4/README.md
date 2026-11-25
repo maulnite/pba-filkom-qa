@@ -1,5 +1,7 @@
 # Anggota 4 — Ekstraksi Jawaban (Hybrid Linguistic-Symbolic)
 
+Rimba Nevada · 245150201111013
+
 Modul ini mengekstrak jawaban ringkas dari kandidat passage hasil pencarian Anggota 3 berdasarkan `tipe_jawaban` dari Anggota 2, tanpa LLM generatif.
 
 ## Arsitektur Hybrid

@@ -22,7 +22,7 @@ Program menampilkan pertanyaan, peringkat bukti pertama, Hit@5, dan MRR. Ketujuh
 | **1. Korpus · Orie** | PDF → teks per halaman → 440 passage JSONL dengan ID, konteks, dan halaman sumber. | [Spesifikasi korpus](Anggota1_Korpus/SPEK_PASSAGE.md) · [Notebook](Anggota1_Korpus/Anggota1_Korpus.ipynb) |
 | **2. Pertanyaan · Rio** | Pertanyaan → token pencarian, jenis pertanyaan, dan tipe jawaban. Fungsi yang sama menyiapkan token passage. | [Dokumentasi](Anggota2_Pertanyaan/README.md) · [Notebook](Anggota2_Pertanyaan/Anggota2_Pertanyaan.ipynb) |
 | **3. Pencarian · Affan** | Token → TF-IDF dan cosine similarity → kandidat berperingkat dengan teks asli dan metadata sumber. | [Dokumentasi](Anggota3_Retrieval/README.md) · [Notebook](Anggota3_Retrieval/Anggota3_Retrieval.ipynb) |
-| **4. Ekstraksi Jawaban** | Kandidat passage + `tipe_jawaban` → arsitektur Hybrid (Simbolik + Dependency Parsing UDPipe) → jawaban ringkas dan sumber. | [Dokumentasi](Anggota4/README.md) · [Notebook](Anggota4/Anggota4_Jawaban.ipynb) |
+| **4. Ekstraksi Jawaban · Rimba** | Kandidat passage + `tipe_jawaban` → arsitektur Hybrid (Simbolik + Dependency Parsing UDPipe) → jawaban ringkas dan sumber. | [Dokumentasi](Anggota4/README.md) · [Notebook](Anggota4/Anggota4_Jawaban.ipynb) |
 
 ## Data
 
