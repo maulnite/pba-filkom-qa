@@ -1,0 +1,9 @@
+[project]
+name = "pba-filkom-qa"
+version = "0.1.0"
+description = "Baseline pencarian passage untuk sistem tanya jawab akademik FILKOM UB"
+requires-python = ">=3.11"
+dependencies = ["scikit-learn==1.7.1"]
+
+[dependency-groups]
+notebook = ["ipykernel", "nbconvert"]

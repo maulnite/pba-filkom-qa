@@ -1,0 +1,35 @@
+[
+  {
+    "no": 1,
+    "penanya": "Anggota 3",
+    "pertanyaan": "Berapa lama waktu maksimal untuk menyelesaikan studi sarjana?",
+    "jawaban": "14 semester sejak pertama kali terdaftar sebagai mahasiswa.",
+    "passage_id": ["pa2020-II-I-8"],
+    "tipe": "DURASI",
+    "jenis_pertanyaan": "BERAPA",
+    "bukti": "paling lama empat belas semester terhitung sejak saat mahasiswa tersebut untuk pertama kalinya terdaftar sebagai mahasiswa",
+    "catatan": "Pedoman Akademik FILKOM 2020, halaman PDF 21."
+  },
+  {
+    "no": 2,
+    "penanya": "Anggota 3",
+    "pertanyaan": "Kapan batas pengajuan cuti akademik setelah daftar ulang?",
+    "jawaban": "Paling lambat 1 bulan setelah masa daftar ulang berakhir.",
+    "passage_id": ["pa2020-III-G-2"],
+    "tipe": "WAKTU",
+    "jenis_pertanyaan": "KAPAN",
+    "bukti": "Cuti akademik diajukan paling lambat 1 (satu) bulan setelah berakhirnya masa daftar ulang",
+    "catatan": "Tenggat relatif, bukan tanggal kalender. Pedoman Akademik FILKOM 2020, halaman PDF 26."
+  },
+  {
+    "no": 3,
+    "penanya": "Anggota 3",
+    "pertanyaan": "Apa rumus indeks prestasi semester?",
+    "jawaban": "IP = Σ (K_i × Na_i) / Σ K_i.",
+    "passage_id": ["pa2020-II-H-3"],
+    "tipe": "RUMUS",
+    "jenis_pertanyaan": "APA",
+    "bukti": "IP = Σ (K_i × Na_i) / Σ K_i",
+    "catatan": "Pedoman Akademik FILKOM 2020, halaman PDF 20."
+  }
+]

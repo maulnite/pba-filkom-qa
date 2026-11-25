@@ -1,0 +1,46 @@
+[
+  {
+    "no": 1,
+    "penanya": "Anggota 2",
+    "pertanyaan": "Berapa sks minimal untuk menyelesaikan studi sarjana?",
+    "jawaban": "144 sks",
+    "passage_id": ["pa2020-II-I-7"],
+    "tipe": "ANGKA",
+    "jenis_pertanyaan": "BERAPA",
+    "bukti": "jumlah nilai kredit minimal 144 sks",
+    "catatan": "Pertanyaan hanya meminta jumlah sks. Persyaratan kelulusan lain tetap berlaku."
+  },
+  {
+    "no": 2,
+    "penanya": "Anggota 2",
+    "pertanyaan": "Berapa lama waktu maksimal untuk Ujian Skripsi?",
+    "jawaban": "75 menit",
+    "passage_id": ["pa2020-VI-D-10"],
+    "tipe": "DURASI",
+    "jenis_pertanyaan": "BERAPA",
+    "bukti": "Ujian Skripsi paling lama 75 menit",
+    "catatan": "Batas waktu untuk masing-masing mahasiswa."
+  },
+  {
+    "no": 3,
+    "penanya": "Anggota 2",
+    "pertanyaan": "Apa itu skripsi?",
+    "jawaban": "Karya ilmiah mahasiswa pendidikan program sarjana yang merupakan wujud dari kajian pengetahuan dan/atau penerapan teknologi berdasarkan kaidah ilmiah dalam bidang studi yang telah dipelajarinya.",
+    "passage_id": ["pa2020-VI-A-1"],
+    "tipe": "DEFINISI",
+    "jenis_pertanyaan": "APA",
+    "bukti": "Skripsi adalah karya ilmiah mahasiswa pendidikan program sarjana",
+    "catatan": "Jawaban merupakan definisi pada passage, tanpa penanda butir."
+  },
+  {
+    "no": 4,
+    "penanya": "Anggota 2",
+    "pertanyaan": "Apa nilai huruf untuk nilai angka 78?",
+    "jawaban": "B+",
+    "passage_id": ["pa2020-tabel3-2", "penilaian-konversi-2"],
+    "tipe": "NILAI_HURUF",
+    "jenis_pertanyaan": "APA",
+    "bukti": "75 < N ≤ 80 dikonversi menjadi nilai huruf B+",
+    "catatan": "75 < 78 ≤ 80. Kedua sumber memuat rentang B+ yang sama; utamakan FILKOM 2020 saat menampilkan sumber."
+  }
+]

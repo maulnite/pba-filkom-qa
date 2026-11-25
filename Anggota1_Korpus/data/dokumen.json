@@ -1,0 +1,25 @@
+{
+  "pa2020": {
+    "judul": "Buku Pedoman Akademik Fakultas Ilmu Komputer Universitas Brawijaya",
+    "tahun": 2020,
+    "url": "https://filkom.ub.ac.id/wp-content/uploads/2021/09/Buku-Pedoman-Akademik-FILKOM-2020.pdf",
+    "file": "Buku-Pedoman-Akademik-FILKOM-2020.pdf",
+    "metode": "pdf",
+    "catatan": "Rumus Nilai Akhir (hlm. 18) dan Indeks Prestasi (hlm. 20) berupa objek rumus yang tidak bisa diekstrak sebagai teks; keduanya ditulis ulang manual dari gambar PDF."
+  },
+  "tatatertib": {
+    "judul": "Tata Tertib Pelaksanaan Ujian (UTS & UAS) FILKOM UB",
+    "tahun": 2016,
+    "url": "https://filkom.ub.ac.id/wp-content/uploads/2021/04/Tata_Tertib_Pelaksanaan_UTS_dan_UAS_2.pdf",
+    "file": "Tata_Tertib_Pelaksanaan_UTS_dan_UAS_2.pdf",
+    "metode": "pdf"
+  },
+  "penilaian": {
+    "judul": "Pedoman Penilaian dan Perhitungan Indeks Prestasi PTIIK",
+    "tahun": 2015,
+    "url": "https://filkom.ub.ac.id/wp-content/uploads/2021/04/Pedoman_Penilaian_dan_Perhitungan_Indeks_Prestasi_PTIIK.pdf",
+    "file": "Pedoman_Penilaian_dan_Perhitungan_Indeks_Prestasi_PTIIK.pdf",
+    "metode": "manual",
+    "catatan": "Dokumen hasil scan; teks OCR bawaan PDF salah baca (≤ terbaca 'S', 'Bobot' terbaca 'Sobot'). Seluruh isi diketik ulang manual dari gambar dokumen."
+  }
+}

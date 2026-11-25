@@ -1,0 +1,292 @@
+{
+  "pa2020": {
+    "tabel": [
+      {
+        "id": "tabel1",
+        "judul": "Tabel 1. Beban Studi maksimal berdasarkan IP semester",
+        "halaman": 15,
+        "bab": "II",
+        "subbab": "C",
+        "mulai": "^Tabel 1\\. Beban Studi",
+        "sampai": "^Prasyarat dapat berupa",
+        "templat": "Jika Indeks Prestasi (IP) semester sebelumnya {ip}, beban studi maksimum yang boleh diambil pada semester berikutnya adalah {beban}.",
+        "baris": [
+          {
+            "ip": "IP ≥ 3,00",
+            "beban": "24 sks"
+          },
+          {
+            "ip": "2,50 ≤ IP < 3,00",
+            "beban": "21 sks"
+          },
+          {
+            "ip": "2,00 ≤ IP < 2,50",
+            "beban": "18 sks"
+          },
+          {
+            "ip": "1,50 ≤ IP < 2,00",
+            "beban": "15 sks"
+          },
+          {
+            "ip": "IP < 1,50",
+            "beban": "kurang dari 12 sks (< 12 sks)"
+          }
+        ]
+      },
+      {
+        "id": "tabel2",
+        "judul": "Tabel 2. Hasil penilaian akhir mata kuliah dinyatakan dengan Huruf Mutu (HM) dan Angka Mutu (AM)",
+        "halaman": 18,
+        "bab": "II",
+        "subbab": "G",
+        "mulai": "^Tabel 2 Hasil penilaian",
+        "sampai": "^4\\. Sebagai pedoman",
+        "templat": "Huruf Mutu (HM) {hm} memiliki Angka Mutu (AM) {am} dengan kategori {kategori}.",
+        "baris": [
+          {
+            "hm": "A",
+            "am": "4",
+            "kategori": "Sangat Baik"
+          },
+          {
+            "hm": "B+",
+            "am": "3,5",
+            "kategori": "Antara Sangat Baik dan Baik"
+          },
+          {
+            "hm": "B",
+            "am": "3",
+            "kategori": "Baik"
+          },
+          {
+            "hm": "C+",
+            "am": "2,5",
+            "kategori": "Antara Baik dan Cukup"
+          },
+          {
+            "hm": "C",
+            "am": "2",
+            "kategori": "Cukup"
+          },
+          {
+            "hm": "D+",
+            "am": "1,5",
+            "kategori": "Antara Cukup dan Kurang"
+          },
+          {
+            "hm": "D",
+            "am": "1",
+            "kategori": "Kurang"
+          },
+          {
+            "hm": "E",
+            "am": "0",
+            "kategori": "Sangat Kurang"
+          }
+        ]
+      },
+      {
+        "id": "tabel3",
+        "judul": "Tabel 3. Konversi angka ke Huruf",
+        "halaman": 19,
+        "bab": "II",
+        "subbab": "G",
+        "mulai": "^Tabel 3\\. Konversi",
+        "sampai": "^6\\. Penilaian berbasis",
+        "templat": "Nilai angka (N) dengan rentang {rentang} dikonversi menjadi nilai huruf {huruf}.",
+        "baris": [
+          {
+            "rentang": "80 < N ≤ 100",
+            "huruf": "A"
+          },
+          {
+            "rentang": "75 < N ≤ 80",
+            "huruf": "B+"
+          },
+          {
+            "rentang": "69 < N ≤ 75",
+            "huruf": "B"
+          },
+          {
+            "rentang": "60 < N ≤ 69",
+            "huruf": "C+"
+          },
+          {
+            "rentang": "55 < N ≤ 60",
+            "huruf": "C"
+          },
+          {
+            "rentang": "50 < N ≤ 55",
+            "huruf": "D+"
+          },
+          {
+            "rentang": "44 < N ≤ 50",
+            "huruf": "D"
+          },
+          {
+            "rentang": "0 ≤ N ≤ 44",
+            "huruf": "E"
+          }
+        ]
+      },
+      {
+        "id": "bobot",
+        "judul": "Bobot nilai huruf untuk perhitungan Indeks Prestasi",
+        "halaman": 19,
+        "bab": "II",
+        "subbab": "H",
+        "mulai": "^Nilai Huruf Bobot$",
+        "sampai": "^3\\. Perhitungan Indeks Prestasi",
+        "templat": "Dalam perhitungan Indeks Prestasi, nilai huruf {huruf} memiliki bobot {bobot}.",
+        "baris": [
+          {
+            "huruf": "A",
+            "bobot": "4,0"
+          },
+          {
+            "huruf": "B+",
+            "bobot": "3,5"
+          },
+          {
+            "huruf": "B",
+            "bobot": "3,0"
+          },
+          {
+            "huruf": "C+",
+            "bobot": "2,5"
+          },
+          {
+            "huruf": "C",
+            "bobot": "2,0"
+          },
+          {
+            "huruf": "D+",
+            "bobot": "1,5"
+          },
+          {
+            "huruf": "D",
+            "bobot": "1,0"
+          },
+          {
+            "huruf": "E",
+            "bobot": "0,0"
+          }
+        ]
+      }
+    ],
+    "rumus": [
+      {
+        "id": "nilai_akhir",
+        "halaman": 18,
+        "setelah": "dapat ditentukan dengan rumus:$",
+        "teks": "NA = (Σ Bk_i × Nk_i + Bm × Nm + Bp × Np + Bt × Nt + Ba × Na + Bs × Ns) / (Σ Bk_i + Bm + Bp + Bt + Ba + Bs), dengan i = 1 sampai n. Artinya, Nilai Akhir adalah jumlah hasil kali bobot dan nilai setiap komponen penilaian dibagi jumlah seluruh bobot."
+      },
+      {
+        "id": "indeks_prestasi",
+        "halaman": 20,
+        "setelah": "^3\\. Perhitungan Indeks Prestasi dilakukan sebagai berikut:$",
+        "teks": "IP = Σ (K_i × Na_i) / Σ K_i, dengan i = 1 sampai n. Artinya, Indeks Prestasi adalah jumlah hasil kali nilai kredit (sks) dan nilai akhir terbobot setiap mata kuliah dibagi jumlah nilai kredit seluruh mata kuliah."
+      }
+    ],
+    "catatan": "Rumus Nilai Akhir (hlm. 18) dan Indeks Prestasi (hlm. 20) berupa objek rumus yang tidak bisa diekstrak sebagai teks; keduanya ditulis ulang manual dari gambar PDF."
+  },
+  "penilaian": {
+    "catatan": "Dokumen hasil scan; teks OCR bawaan PDF salah baca (≤ terbaca 'S', 'Bobot' terbaca 'Sobot'). Seluruh isi diketik ulang manual dari gambar dokumen.",
+    "paragraf": [
+      {
+        "judul_subbab": "SURAT KETERANGAN",
+        "halaman": 1,
+        "teks": "Surat Keterangan Nomor 4215/UN10.36/AK/2015 dari Program Teknologi Informasi dan Ilmu Komputer (PTIIK) Universitas Brawijaya menerangkan bahwa, berdasarkan buku Pedoman Pendidikan PTIIK Universitas Brawijaya Tahun Akademik 2012/2013 pasal 7 mengenai Pedoman Penilaian dan pasal 8 mengenai Perhitungan Indeks Prestasi, pedoman penilaian dan perhitungan indeks prestasi yang berlaku di PTIIK Universitas Brawijaya adalah sebagaimana tercantum dalam tabel pedoman penilaian dan tabel bobot nilai. Surat keterangan ini ditandatangani oleh Ketua PTIIK pada November 2015."
+      }
+    ],
+    "tabel": [
+      {
+        "id": "konversi",
+        "judul": "Pedoman Penilaian PTIIK (konversi nilai angka ke nilai huruf)",
+        "judul_subbab": "PEDOMAN PENILAIAN",
+        "halaman": 1,
+        "templat": "Menurut pedoman penilaian PTIIK, nilai angka (N) dengan rentang {rentang} dikonversi menjadi nilai huruf {huruf}.",
+        "baris": [
+          {
+            "rentang": "80 < N ≤ 100",
+            "huruf": "A"
+          },
+          {
+            "rentang": "75 < N ≤ 80",
+            "huruf": "B+"
+          },
+          {
+            "rentang": "69 < N ≤ 75",
+            "huruf": "B"
+          },
+          {
+            "rentang": "60 < N ≤ 69",
+            "huruf": "C+"
+          },
+          {
+            "rentang": "55 < N ≤ 60",
+            "huruf": "C"
+          },
+          {
+            "rentang": "50 < N ≤ 55",
+            "huruf": "D+"
+          },
+          {
+            "rentang": "44 < N ≤ 50",
+            "huruf": "D"
+          },
+          {
+            "rentang": "0 < N ≤ 44",
+            "huruf": "E"
+          }
+        ]
+      },
+      {
+        "id": "bobot",
+        "judul": "Perhitungan Indeks Prestasi PTIIK (bobot nilai huruf)",
+        "judul_subbab": "PERHITUNGAN INDEKS PRESTASI",
+        "halaman": 1,
+        "templat": "Menurut pedoman perhitungan Indeks Prestasi PTIIK, nilai huruf {huruf} memiliki bobot {bobot}.",
+        "catatan": "Desimal ditulis ulang dengan koma (3.5 -> 3,5) agar seragam dengan dokumen lain. Bobot D tertulis '14' pada dokumen; dicatat sebagai 1 karena dianggap salah ketik (Pedoman FILKOM 2020 menetapkan bobot D = 1,0).",
+        "baris": [
+          {
+            "huruf": "A",
+            "bobot": "4"
+          },
+          {
+            "huruf": "B+",
+            "bobot": "3,5"
+          },
+          {
+            "huruf": "B",
+            "bobot": "3"
+          },
+          {
+            "huruf": "C+",
+            "bobot": "2,5"
+          },
+          {
+            "huruf": "C",
+            "bobot": "2"
+          },
+          {
+            "huruf": "D+",
+            "bobot": "1,5"
+          },
+          {
+            "huruf": "D",
+            "bobot": "1"
+          },
+          {
+            "huruf": "E",
+            "bobot": "0"
+          },
+          {
+            "huruf": "K",
+            "bobot": "0"
+          }
+        ]
+      }
+    ]
+  }
+}
